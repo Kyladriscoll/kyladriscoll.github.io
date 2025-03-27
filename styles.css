@@ -1,20 +1,18 @@
-/* General Body Styles */
+/* General body styling */
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: #1C1C2A; /* Dark mode background */
-    color: #cecece; /* Light gray text */
-    scroll-behavior: smooth;
+    background-color: #2a2a2a; /* Dark background for a dark mode theme */
+    color: #fff; /* White text color for contrast */
 }
 
-/* Header Styles */
+/* Header Section */
 header {
-    background-color: #6f34a1; /* Dark purple for header */
-    color: #cecece; /* Light gray text for header */
-    padding: 15px 0;
+    background-color: #6f34a1; /* Dark purple */
+    color: #fff; /* White text */
+    padding: 20px;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
 }
 
 header nav ul {
@@ -29,169 +27,144 @@ header nav ul li {
 }
 
 header nav ul li a {
+    color: #fff; /* White text */
     text-decoration: none;
-    color: #cecece; /* Light gray text */
-    font-weight: bold;
-    font-size: 18px;
-    padding: 8px 15px;
-    border-radius: 25px;
-    transition: background-color 0.3s ease;
+    font-size: 18px; /* Larger font size for better readability */
+    font-weight: bold; /* Bold for emphasis */
 }
 
 header nav ul li a:hover {
-    background-color: #dc87ff; /* Lighter purple for hover */
+    color: #b052ff; /* Light purple on hover for a nice effect */
 }
 
-/* Section Styles */
-section {
-    padding: 40px 20px;
-    margin: 20px 0;
-    border-radius: 10px;
-    background-color: #2a1f45; /* Dark background for sections */
-    transition: transform 0.3s ease-in-out;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-}
-
-section:hover {
-    transform: scale(1.02); /* Slight zoom-in effect */
-}
-
-/* Hero Section */
-.hero {
-    text-align: center;
+/* Home Section */
+#home {
     padding: 50px;
-    background-color: #b052ff; /* Bright purple for hero section */
-    border-radius: 20px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    background-color: #333; /* Dark background for home section */
+    text-align: center;
 }
 
 .hero h1 {
-    font-size: 3em;
-    color: #cecece; /* Light gray text */
+    font-size: 36px;
+    margin: 0;
+    color: #dc87ff; /* Light purple text */
 }
 
 .hero p {
-    font-size: 1.5em;
-    color: #b288c4; /* Soft lavender text */
+    font-size: 20px;
+    color: #b288c4; /* Soft purple */
 }
 
 /* About Section */
+#about {
+    padding: 30px;
+    background-color: #444; /* Slightly lighter dark background */
+}
+
 #about h2 {
-    color: #b052ff; /* Bright purple */
-    font-size: 2.5em;
-    margin-bottom: 20px;
+    font-size: 28px;
+    color: #b052ff; /* Light purple for section title */
 }
 
-#about h3 {
-    color: #dc87ff; /* Lighter purple */
-    font-size: 1.8em;
-    margin-top: 20px;
+#about p {
+    font-size: 18px;
+    color: #cecece; /* Soft grey text for paragraph */
 }
 
-#about ul {
-    list-style-type: none;
-    padding-left: 0;
+/* Projects Section */
+#projects {
+    padding: 30px;
+    background-color: #555; /* Lighter background for projects section */
 }
 
-#about ul li {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-}
-
-/* Project Section */
 #projects h2 {
-    color: #b052ff; /* Bright purple */
-    font-size: 2.5em;
-    margin-bottom: 20px;
+    font-size: 28px;
+    color: #b052ff; /* Light purple for section title */
 }
 
 .project {
-    background-color: #2a1f45; /* Dark background */
-    padding: 20px;
-    border-radius: 15px;
     margin-bottom: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    background-color: #333; /* Dark background for each project */
+    padding: 15px;
+    border-radius: 5px;
 }
 
 .project h3 {
-    font-size: 2em;
-    color: #dc87ff; /* Lighter purple */
+    font-size: 24px;
+    color: #dc87ff; /* Light purple for project title */
 }
 
 .project p {
-    font-size: 1.2em;
-    color: #cecece; /* Light text for contrast */
+    font-size: 16px;
+    color: #cecece; /* Soft grey for project description */
 }
 
 .project a {
+    color: #b052ff; /* Light purple for links */
     text-decoration: none;
-    color: #b052ff; /* Bright purple links */
-    font-weight: bold;
 }
 
 .project a:hover {
-    text-decoration: underline;
-    color: #dc87ff; /* Lighter purple hover */
+    color: #dc87ff; /* Change link color on hover */
 }
 
 /* Contact Section */
+#contact {
+    padding: 30px;
+    background-color: #444; /* Lighter dark background for contact */
+}
+
 #contact h2 {
-    color: #b052ff; /* Bright purple */
-    font-size: 2.5em;
-    margin-bottom: 20px;
+    font-size: 28px;
+    color: #b052ff; /* Light purple for section title */
+}
+
+#contact p {
+    font-size: 18px;
+    color: #cecece; /* Soft grey text */
 }
 
 #contact ul {
     list-style-type: none;
-    padding-left: 0;
+    padding: 0;
 }
 
 #contact ul li {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-}
-
-#contact a {
-    text-decoration: none;
-    color: #b052ff; /* Bright purple links */
-    font-weight: bold;
-}
-
-#contact a:hover {
-    color: #dc87ff; /* Lighter purple hover */
+    font-size: 18px;
+    color: #b288c4; /* Soft purple for contact links */
 }
 
 /* Footer Section */
 footer {
-    background-color: #6f34a1; /* Dark purple footer */
-    color: #cecece; /* Light gray text */
+    background-color: #333; /* Dark footer background */
+    color: #fff; /* White text for footer */
     text-align: center;
-    padding: 15px 0;
-    position: relative;
-    bottom: 0;
+    padding: 10px;
+    position: fixed;
     width: 100%;
+    bottom: 0;
 }
 
-/* Add pixelated or gaming graphics (optional) */
-section {
-    background-image: url('https://www.pngrepo.com/png/49206/180/pixel-heart-png.png');
-    background-repeat: no-repeat;
-    background-position: top right;
-    background-size: 100px;
-}
-
-/* Media Queries for Responsiveness */
+/* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
     header nav ul li {
         display: block;
-        margin-bottom: 15px;
+        margin: 10px 0;
     }
 
     .hero h1 {
-        font-size: 2em;
+        font-size: 28px;
     }
 
     .hero p {
-        font-size: 1.2em;
+        font-size: 18px;
+    }
+
+    .project h3 {
+        font-size: 20px;
+    }
+
+    .project p {
+        font-size: 14px;
     }
 }
