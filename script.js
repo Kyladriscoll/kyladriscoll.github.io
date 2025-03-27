@@ -1,13 +1,14 @@
-// JavaScript for project dropdown
+// Toggle the project details on hover
 const projects = document.querySelectorAll('.project');
 
 projects.forEach(project => {
-    project.addEventListener('click', () => {
-        const dropdown = project.querySelector('.dropdown-content');
-        if (dropdown.style.display === 'none' || dropdown.style.display === '') {
-            dropdown.style.display = 'block';
-        } else {
-            dropdown.style.display = 'none';
-        }
+    project.addEventListener('mouseover', () => {
+        const details = project.querySelector('.project-details');
+        details.style.display = 'block';
+    });
+
+    project.addEventListener('mouseout', () => {
+        const details = project.querySelector('.project-details');
+        details.style.display = 'none';
     });
 });
