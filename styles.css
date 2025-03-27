@@ -1,19 +1,16 @@
 /* Global Styles */
 body {
-    font-family: 'Arial', sans-serif;
+    background-color: #181818;  /* Dark background color */
+    color: #e0e0e0;  /* Light gray text color */
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #1d1f20;
-    color: #fff;
-    transition: background-color 0.3s, color 0.3s;
 }
 
-/* Header Styling */
 header {
-    background-color: #6a4c79; /* Smokey purple */
+    background-color: #3a2a57;  /* Smoky dark purple */
     padding: 20px;
     text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 header nav ul {
@@ -28,123 +25,75 @@ header nav ul li {
 }
 
 header nav ul li a {
-    color: #fff;
+    color: #e0e0e0;
     text-decoration: none;
     font-size: 1.2em;
-    transition: color 0.3s;
 }
 
 header nav ul li a:hover {
-    color: #dc87ff; /* Lighter purple for hover */
+    color: #dc87ff;  /* Light lavender on hover */
 }
 
 /* Section Styling */
 section {
     padding: 60px 40px;
     margin: 20px 0;
+    background-color: #2b2b2b;  /* Dark grey background */
     border-radius: 8px;
-    background-color: #2c2f36;
-    transition: background-color 0.3s;
 }
 
-/* Home Section */
-#about {
-    background-color: #6a4c79; /* Smokey purple */
-    color: #fff;
-    text-align: center;
-    padding: 80px 20px;
-}
-
-#about h2 {
-    font-size: 2.5em;
-}
-
-#about p {
-    font-size: 1.4em;
+section h2 {
+    font-size: 2.2em;
+    color: #dc87ff;  /* Light lavender for headings */
 }
 
 /* Projects Section */
-#projects .project {
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    background-color: #6a4c79; /* Smokey purple */
-    color: #333;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
-}
-
-#projects .project:hover {
-    transform: translateY(-10px);
-}
-
-/* Project Titles and Descriptions */
-.project h3 {
-    font-size: 1.8em;
-    color: #fff;
-    margin-bottom: 10px;
-}
-
-.project p {
-    font-size: 1.1em;
-    color: #333;
-}
-
-/* Dropdown Effect */
-.project .dropdown-content {
-    display: none;
+.project {
+    background-color: #3a2a57;  /* Smoky dark purple */
     padding: 15px;
-    background-color: #2c2f36;
-    border-radius: 5px;
-    color: #fff;
+    margin-bottom: 20px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
 }
 
-.project .dropdown-content p {
+.project:hover {
+    background-color: #5c3b80;  /* Slightly lighter purple on hover */
+}
+
+/* Dropdown Content */
+.dropdown-content {
+    display: none;
+    padding-top: 10px;
     font-size: 1.1em;
-    margin-bottom: 10px;
+    color: #e0e0e0;
+    margin-top: 10px;
 }
 
-.project .dropdown-content a {
-    color: #dc87ff; /* Lavender link */
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.project .show .dropdown-content {
+.project:hover .dropdown-content {
     display: block;
 }
 
 /* Resume Section */
-#resume {
-    background-color: #2c2f36;
-    text-align: center;
-    color: #fff;
-    padding: 60px 20px;
-}
-
-#resume h2 {
-    font-size: 2.5em;
-}
-
 #resume a {
-    color: #dc87ff;
+    color: #dc87ff;  /* Light lavender */
     text-decoration: none;
     font-weight: bold;
 }
 
 #resume a:hover {
-    color: #fff;
+    color: #e0e0e0;  /* Light grey on hover */
 }
 
 /* Footer Section */
 footer {
-    background-color: #6a4c79;
-    text-align: center;
+    background-color: #3a2a57;  /* Smoky dark purple */
     padding: 15px 0;
+    text-align: center;
+    color: #e0e0e0;
     position: fixed;
     width: 100%;
     bottom: 0;
-    color: #fff;
 }
 
 /* Responsive Design */
@@ -156,13 +105,5 @@ footer {
 
     section {
         padding: 40px 20px;
-    }
-
-    footer {
-        font-size: 0.8em;
-    }
-
-    #about .hero h1 {
-        font-size: 2.5em;
     }
 }
