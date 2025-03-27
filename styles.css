@@ -84,6 +84,8 @@ h3 {
     border-radius: 8px;
     margin-bottom: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    background-color: #6f34a1; /* Same color for all projects as Project 1 */
+    color: #333; /* Dark grey font color */
     transition: transform 0.3s ease, background-color 0.3s;
 }
 
@@ -91,27 +93,16 @@ h3 {
     transform: translateY(-10px);
 }
 
-/* Specific Background Colors for Individual Projects */
-#projects .project:nth-child(1) {
-    background-color: #6f34a1; /* Purple */
-}
-
-#projects .project:nth-child(2) {
-    background-color: #b052ff; /* Lighter Purple */
-}
-
-#projects .project:nth-child(3) {
-    background-color: #dc87ff; /* Light Pink */
-}
-
-.project p {
-    font-size: 1.1em;
-}
-
+/* Specific Styles for Project Titles and Descriptions */
 .project h3 {
     font-size: 1.6em;
     color: #fff;
     margin-bottom: 10px;
+}
+
+.project p {
+    font-size: 1.1em;
+    color: #333; /* Dark grey for project description */
 }
 
 /* Contact Section */
