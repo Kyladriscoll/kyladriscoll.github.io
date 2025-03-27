@@ -1,178 +1,192 @@
-/* Global Styles */
+/* General Body Styles */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #1d1f20;
-    color: #fff;
-    transition: background-color 0.3s, color 0.3s;
+    background: #FBE8E8; /* Soft pink background */
+    color: #333;
+    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
 }
 
-/* Header Styling */
+/* Header Styles */
 header {
-    background-color: #6a4c79; /* Dark purple */
-    padding: 20px;
+    background-color: #FFB6C1; /* Light pink */
+    color: #fff;
+    padding: 15px 0;
     text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 header nav ul {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
     margin: 0;
 }
 
 header nav ul li {
     display: inline;
-    margin: 0 15px;
+    margin-right: 20px;
 }
 
 header nav ul li a {
-    color: #fff;
     text-decoration: none;
-    font-size: 1.2em;
-    transition: color 0.3s;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 8px 15px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
 }
 
 header nav ul li a:hover {
-    color: #dc87ff; /* Lighter lavender for hover */
+    background-color: #FF69B4; /* Hot pink hover */
 }
 
-/* Section Styling */
+/* Section Styles */
 section {
-    padding: 60px 40px;
+    padding: 40px 20px;
     margin: 20px 0;
-    border-radius: 8px;
-    background-color: #2c2f36;
-    transition: background-color 0.3s;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #FFF0F5; /* Light lavender */
+    transition: transform 0.3s ease-in-out;
 }
 
-/* Home Section */
-#home {
-    background-color: #6a4c79; /* Dark purple */
+section:hover {
+    transform: scale(1.02); /* Slight zoom-in effect */
+}
+
+/* Hero Section */
+.hero {
     text-align: center;
-    color: #fff;
-    padding: 80px 20px;
+    padding: 50px;
+    background-color: #FFC0CB; /* Light pink */
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-#home .hero h1 {
-    font-size: 2.8em;
-    margin-bottom: 10px;
+.hero h1 {
+    font-size: 3em;
+    color: #FF1493; /* Deep pink */
 }
 
-#home .hero p {
-    font-size: 1.4em;
-    margin-top: 0;
-    color: #dc87ff; /* Lighter lavender */
+.hero p {
+    font-size: 1.5em;
+    color: #4B0082; /* Indigo color for contrast */
 }
 
 /* About Section */
-h2 {
-    font-size: 2.2em;
-    color: #dc87ff; /* Lighter lavender */
-    margin-bottom: 15px;
-}
-
-h3 {
-    font-size: 1.8em;
-    color: #dc87ff; /* Lighter lavender */
-}
-
-/* Projects Section */
-#projects .project {
-    padding: 20px;
-    border-radius: 8px;
+#about h2 {
+    color: #FF1493;
+    font-size: 2.5em;
     margin-bottom: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    background-color: #6a4c79; /* Dark purple */
-    color: #fff;
-    transition: transform 0.3s ease, background-color 0.3s;
-    text-align: center;
 }
 
-#projects .project img {
-    width: 100%;
-    max-width: 500px;
-    border-radius: 8px;
-    margin: 15px 0;
+#about h3 {
+    color: #FF69B4; /* Hot pink */
+    font-size: 1.8em;
+    margin-top: 20px;
 }
 
-#projects .project:hover {
-    transform: translateY(-10px);
+#about ul {
+    list-style-type: none;
+    padding-left: 0;
 }
 
-/* Download Button */
-.download-btn {
-    display: inline-block;
-    padding: 10px 15px;
-    background-color: #dc87ff; /* Lighter lavender */
-    color: #6a4c79; /* Dark purple */
+#about ul li {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+/* Project Section */
+#projects h2 {
+    color: #FF1493;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.project {
+    background-color: #FFF0F5;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project h3 {
+    font-size: 2em;
+    color: #FF69B4;
+}
+
+.project p {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.project a {
     text-decoration: none;
-    border-radius: 5px;
-    margin-top: 10px;
+    color: #FF1493;
     font-weight: bold;
 }
 
-.download-btn:hover {
-    background-color: #fff;
-    color: #6a4c79;
+.project a:hover {
+    text-decoration: underline;
 }
 
 /* Contact Section */
-#contact {
-    background-color: #2c2f36;
-    text-align: center;
-}
-
 #contact h2 {
-    font-size: 2.2em;
-    color: #fff;
+    color: #FF1493;
+    font-size: 2.5em;
     margin-bottom: 20px;
 }
 
-#contact p {
+#contact ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#contact ul li {
     font-size: 1.2em;
-    color: #fff;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 #contact a {
-    color: #dc87ff; /* Lighter lavender */
     text-decoration: none;
+    color: #FF1493;
     font-weight: bold;
-}
-
-#contact a:hover {
-    color: #fff;
 }
 
 /* Footer Section */
 footer {
-    background-color: #6a4c79; /* Dark purple */
+    background-color: #FFB6C1;
+    color: #fff;
     text-align: center;
     padding: 15px 0;
-    position: fixed;
-    width: 100%;
+    position: relative;
     bottom: 0;
-    color: #fff;
+    width: 100%;
 }
 
-/* Responsive Design */
+/* Add some pixelated graphics or other girly elements */
+section {
+    background-image: url('https://www.pngrepo.com/png/49206/180/pixel-heart-png.png');
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 100px;
+}
+
+/* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     header nav ul li {
         display: block;
-        margin-bottom: 10px;
+        margin-bottom: 15px;
     }
 
-    section {
-        padding: 40px 20px;
+    .hero h1 {
+        font-size: 2em;
     }
 
-    footer {
-        font-size: 0.8em;
-    }
-
-    #home .hero h1 {
-        font-size: 2.5em;
+    .hero p {
+        font-size: 1.2em;
     }
 }
