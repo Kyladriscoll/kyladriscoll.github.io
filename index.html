@@ -1,52 +1,112 @@
-<section id="projects">
-    <h2>My Projects</h2>
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1d1f20;
+    color: #fff;
+    transition: background-color 0.3s, color 0.3s;
+}
 
-    <!-- Project 1 -->
-    <div class="project">
-        <h3>Project 1: Social Media Dashboard</h3>
-        <p>A web application that aggregates and displays social media activity from multiple platforms like Twitter, Facebook, and Instagram. Built with React for the frontend, Node.js for the backend, and MongoDB for data storage. It includes authentication and real-time notifications.</p>
-        <a href="https://github.com/yourusername/social-media-dashboard" target="_blank">View on GitHub</a>
-    </div>
+/* Header Styling */
+header {
+    background-color: #6f34a1; /* Purple background */
+    padding: 20px;
+    text-align: center;
+}
 
-    <!-- Project 2 -->
-    <div class="project">
-        <h3>Project 2: E-Commerce Website</h3>
-        <p>This e-commerce platform allows users to browse and purchase products with integrated payment processing (Stripe). Developed with Vue.js for the frontend and Firebase for user authentication and real-time data storage.</p>
-        <a href="https://github.com/yourusername/e-commerce-website" target="_blank">View on GitHub</a>
-    </div>
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
 
-    <!-- Project 3 -->
-    <div class="project">
-        <h3>Project 3: Task Management App</h3>
-        <p>A productivity app that allows users to manage and track their tasks. Built with React for the frontend, and Node.js with Express for the backend. Features include user login, task categorization, and notifications.</p>
-        <a href="https://github.com/yourusername/task-management-app" target="_blank">View on GitHub</a>
-    </div>
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
 
-    <!-- Project 4 -->
-    <div class="project">
-        <h3>Project 4: Personal Finance Tracker</h3>
-        <p>This application helps users track their income and expenses. It includes interactive graphs and reports generated from stored data. The app is built with Angular and Firebase for real-time data updates.</p>
-        <a href="https://github.com/yourusername/finance-tracker" target="_blank">View on GitHub</a>
-    </div>
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+}
 
-    <!-- Project 5 -->
-    <div class="project">
-        <h3>Project 5: Portfolio Website</h3>
-        <p>This is the portfolio website you're currently viewing! It's built using HTML, CSS, and JavaScript, showcasing my skills, past projects, and experience as a web developer.</p>
-        <a href="https://github.com/yourusername/portfolio" target="_blank">View on GitHub</a>
-    </div>
+/* Section Styling */
+section {
+    padding: 40px;
+    margin: 20px 0;
+    border-radius: 8px;
+}
 
-    <!-- Project 6: Weather App -->
-    <div class="project">
-        <h3>Project 6: Weather App</h3>
-        <p>A simple web app that allows users to check the weather based on their location. Utilizes the OpenWeatherMap API to fetch data and displays it in a user-friendly interface. Built with React, and styled with Tailwind CSS for a modern look.</p>
-        <a href="https://github.com/yourusername/weather-app" target="_blank">View on GitHub</a>
-    </div>
+h2 {
+    color: #b052ff; /* Lighter purple */
+    font-size: 2em;
+    margin-bottom: 20px;
+}
 
-    <!-- Project 7: Blogging Platform -->
-    <div class="project">
-        <h3>Project 7: Blogging Platform</h3>
-        <p>A full-stack blogging platform where users can create, edit, and delete posts. Users can also comment and interact with other blog posts. Built with Node.js, Express.js, MongoDB, and EJS for the templating engine.</p>
-        <a href="https://github.com/yourusername/blogging-platform" target="_blank">View on GitHub</a>
-    </div>
-</section>
+h3 {
+    color: #dc87ff; /* Light pink */
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 5px 0;
+}
+
+a {
+    color: #b052ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Projects Section */
+.project {
+    background-color: #2c2f36;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s;
+}
+
+.project:hover {
+    background-color: #6f34a1;
+}
+
+.project a {
+    display: block;
+    margin-top: 10px;
+    color: #fff;
+    font-size: 1.1em;
+}
+
+/* Footer Section */
+footer {
+    background-color: #6f34a1;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    header nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    footer {
+        font-size: 0.8em;
+    }
+}
