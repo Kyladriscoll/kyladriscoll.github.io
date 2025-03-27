@@ -6,6 +6,7 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden; /* Prevent horizontal scroll */
+    scroll-behavior: smooth; /* Smooth scrolling across sections */
 }
 
 /* Header Section */
@@ -15,9 +16,12 @@ header {
     padding: 20px;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Darker shadow for depth */
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    width: 100%;
     z-index: 10;
+    transition: background-color 0.3s ease; /* Smooth color transition on scroll */
 }
 
 header nav ul {
@@ -44,16 +48,26 @@ header nav ul li a:hover {
     transform: scale(1.1); /* Slightly enlarge text on hover */
 }
 
+/* Sections Styling */
+section {
+    padding: 80px 20px;
+    margin: 0;
+    position: relative;
+}
+
 /* Home Section */
 #home {
-    padding: 80px 20px;
+    padding: 100px 20px;
     text-align: center;
     background-color: #6f34a1; /* Dark purple background */
     animation: fadeIn 2s ease-in-out; /* Smooth fade-in animation */
+    background-image: url('home-bg.jpg'); /* Add background image */
+    background-size: cover;
+    background-position: center;
 }
 
 #home .hero h1 {
-    font-size: 36px;
+    font-size: 40px;
     color: #fff;
     animation: popUp 1.5s ease-in-out; /* Animate the title with a popping effect */
 }
@@ -182,15 +196,6 @@ footer {
     bottom: 0;
 }
 
-/* Additional Styling for Links and Buttons */
-a {
-    transition: color 0.3s ease;
-}
-
-a:hover {
-    color: #dc87ff;
-}
-
 /* Animations for Sections */
 @keyframes fadeIn {
     0% {
@@ -236,11 +241,35 @@ a:hover {
     }
 }
 
+/* Hover effects for interactive elements */
+a:hover {
+    color: #dc87ff;
+}
+
+.project:hover {
+    transform: scale(1.05);
+}
+
+/* Parallax Effect for Home Section Background */
+#home {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
 /* Add responsiveness for smaller screens */
 @media (max-width: 768px) {
     header nav ul li {
         display: block;
         margin-right: 0;
         margin-bottom: 10px;
+    }
+
+    #home .hero h1 {
+        font-size: 30px;
+    }
+
+    #home .hero p {
+        font-size: 18px;
     }
 }
