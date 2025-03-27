@@ -1,161 +1,197 @@
-/* Global Styles */
+/* General Body Styles */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #fce4ec; /* Light pink background */
-    color: #4a148c; /* Darker pink text */
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
+    background: #1D1F29; /* Dark background */
+    color: #F1F1F1; /* Light text for contrast */
+    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
 }
 
-h1, h2, h3 {
-    font-family: 'Dancing Script', cursive; /* Playful, elegant script font for headings */
-    color: #f06292; /* Soft pink for headings */
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-p {
-    font-size: 1.1rem;
-    color: #880e4f; /* Slightly darker pink for paragraph text */
-    padding: 10px;
-}
-
-a {
-    color: #f06292; /* Soft pink link color */
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-a:hover {
-    color: #ec407a; /* Darker pink on hover */
-    text-decoration: underline;
-}
-
-/* Header Styling */
+/* Header Styles */
 header {
-    background-color: #ec407a; /* Girly bright pink background */
-    color: white;
-    padding: 20px;
+    background-color: #282C34; /* Dark grey background for header */
+    color: #FF80FF; /* Neon pink text */
+    padding: 15px 0;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
 }
 
 header nav ul {
     list-style-type: none;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
+    margin: 0;
 }
 
 header nav ul li {
-    margin: 0 15px;
+    display: inline;
+    margin-right: 20px;
 }
 
 header nav ul li a {
-    color: white;
+    text-decoration: none;
+    color: #FF80FF; /* Neon pink links */
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 18px;
+    padding: 8px 15px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
 }
 
 header nav ul li a:hover {
-    color: #fce4ec; /* Soft pink hover effect */
+    background-color: #FF1493; /* Hot pink hover */
 }
 
 /* Section Styles */
 section {
     padding: 40px 20px;
-    margin: 40px 0;
-    background-color: #ffffff; /* White background for sections */
-    border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    border-radius: 10px;
+    background-color: #2A2D3B; /* Dark grey background for sections */
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
-section h2 {
-    color: #ec407a; /* Heading color */
-    font-size: 2rem;
-    margin-bottom: 20px;
+section:hover {
+    transform: scale(1.02); /* Slight zoom-in effect */
 }
 
 /* Hero Section */
 .hero {
     text-align: center;
-    background-image: url('https://www.transparenttextures.com/patterns/paper-fabric-3.png'); /* Soft texture background */
-    background-color: #fce4ec; /* Light pink */
-    padding: 60px 20px;
-    border-radius: 10px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 50px;
+    background-color: #4B0082; /* Indigo background */
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
 }
 
 .hero h1 {
-    font-size: 3rem;
-    color: #ec407a;
+    font-size: 3em;
+    color: #FF80FF; /* Neon pink text */
 }
 
 .hero p {
-    font-size: 1.5rem;
-    color: #880e4f;
+    font-size: 1.5em;
+    color: #D1D1D1; /* Light grey for contrast */
 }
 
-/* Button Styles */
-button {
-    background-color: #f06292; /* Soft pink button */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+/* About Section */
+#about h2 {
+    color: #FF80FF; /* Neon pink */
+    font-size: 2.5em;
+    margin-bottom: 20px;
 }
 
-button:hover {
-    background-color: #ec407a; /* Darker pink on hover */
+#about h3 {
+    color: #FF1493; /* Hot pink */
+    font-size: 1.8em;
+    margin-top: 20px;
 }
 
-/* Footer Styling */
-footer {
-    background-color: #ec407a; /* Matching footer color */
-    color: white;
-    text-align: center;
-    padding: 20px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    border-top: 5px solid #f06292; /* Border for elegance */
+#about ul {
+    list-style-type: none;
+    padding-left: 0;
 }
 
-footer p {
-    margin: 0;
+#about ul li {
+    font-size: 1.2em;
+    margin-bottom: 10px;
 }
 
-/* Card Styling for Projects */
+/* Project Section */
+#projects h2 {
+    color: #FF80FF; /* Neon pink */
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
 .project {
-    background-color: #ffffff;
-    border-radius: 15px;
+    background-color: #2A2D3B; /* Dark grey background */
     padding: 20px;
-    margin: 15px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 .project h3 {
-    color: #ec407a;
+    font-size: 2em;
+    color: #FF1493; /* Hot pink */
+}
+
+.project p {
+    font-size: 1.2em;
+    color: #F1F1F1; /* Light text for contrast */
 }
 
 .project a {
-    color: #ec407a;
-    font-weight: bold;
     text-decoration: none;
-    transition: color 0.3s ease;
+    color: #FF80FF; /* Neon pink links */
+    font-weight: bold;
 }
 
 .project a:hover {
-    color: #f06292; /* Lighter pink hover effect */
+    text-decoration: underline;
+    color: #FF1493; /* Hot pink hover */
 }
 
-/* Fun Additions: Background Pattern */
-body {
-    background-image: url('https://www.transparenttextures.com/patterns/purty-wood.png');
-    background-size: cover;
+/* Contact Section */
+#contact h2 {
+    color: #FF80FF; /* Neon pink */
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+#contact ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#contact ul li {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+#contact a {
+    text-decoration: none;
+    color: #FF80FF; /* Neon pink links */
+    font-weight: bold;
+}
+
+#contact a:hover {
+    color: #FF1493; /* Hot pink hover */
+}
+
+/* Footer Section */
+footer {
+    background-color: #282C34; /* Dark grey footer */
+    color: #F1F1F1; /* Light text */
+    text-align: center;
+    padding: 15px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Add pixelated or gaming graphics (optional) */
+section {
+    background-image: url('https://www.pngrepo.com/png/49206/180/pixel-heart-png.png');
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 100px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    header nav ul li {
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1.2em;
+    }
 }
