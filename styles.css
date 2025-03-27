@@ -2,6 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    padding-bottom: 50px; /* Adjusted for footer space */
 }
 
 header {
@@ -14,10 +15,11 @@ header {
 header nav ul {
     list-style-type: none;
     padding: 0;
+    text-align: center; /* Center navigation links */
 }
 
 header nav ul li {
-    display: inline;
+    display: inline-block; /* Make items inline and block-level */
     margin-right: 20px;
 }
 
@@ -26,14 +28,20 @@ header nav ul li a {
     text-decoration: none;
 }
 
+header nav ul li a:hover {
+    color: #f1f1f1; /* Lighten link color on hover */
+    text-decoration: underline;
+}
+
 section {
     padding: 20px;
-    margin: 20px 0;
+    margin: 40px 0; /* Added more space between sections */
 }
 
 .hero {
     text-align: center;
     padding: 50px;
+    margin-bottom: 40px; /* Added spacing between hero section and following content */
 }
 
 .project {
@@ -48,4 +56,8 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
+}
+
+html {
+    scroll-behavior: smooth; /* Smooth scrolling */
 }
