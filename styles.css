@@ -3,15 +3,15 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background: #1D1F29; /* Dark background */
-    color: #F1F1F1; /* Light text for contrast */
-    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+    background: #1C1C2A; /* Dark mode background */
+    color: #cecece; /* Light gray text */
+    scroll-behavior: smooth;
 }
 
 /* Header Styles */
 header {
-    background-color: #282C34; /* Dark grey background for header */
-    color: #FF80FF; /* Neon pink text */
+    background-color: #6f34a1; /* Dark purple for header */
+    color: #cecece; /* Light gray text for header */
     padding: 15px 0;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
@@ -30,7 +30,7 @@ header nav ul li {
 
 header nav ul li a {
     text-decoration: none;
-    color: #FF80FF; /* Neon pink links */
+    color: #cecece; /* Light gray text */
     font-weight: bold;
     font-size: 18px;
     padding: 8px 15px;
@@ -39,7 +39,7 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    background-color: #FF1493; /* Hot pink hover */
+    background-color: #dc87ff; /* Lighter purple for hover */
 }
 
 /* Section Styles */
@@ -47,7 +47,7 @@ section {
     padding: 40px 20px;
     margin: 20px 0;
     border-radius: 10px;
-    background-color: #2A2D3B; /* Dark grey background for sections */
+    background-color: #2a1f45; /* Dark background for sections */
     transition: transform 0.3s ease-in-out;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
@@ -60,30 +60,30 @@ section:hover {
 .hero {
     text-align: center;
     padding: 50px;
-    background-color: #4B0082; /* Indigo background */
+    background-color: #b052ff; /* Bright purple for hero section */
     border-radius: 20px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
 }
 
 .hero h1 {
     font-size: 3em;
-    color: #FF80FF; /* Neon pink text */
+    color: #cecece; /* Light gray text */
 }
 
 .hero p {
     font-size: 1.5em;
-    color: #D1D1D1; /* Light grey for contrast */
+    color: #b288c4; /* Soft lavender text */
 }
 
 /* About Section */
 #about h2 {
-    color: #FF80FF; /* Neon pink */
+    color: #b052ff; /* Bright purple */
     font-size: 2.5em;
     margin-bottom: 20px;
 }
 
 #about h3 {
-    color: #FF1493; /* Hot pink */
+    color: #dc87ff; /* Lighter purple */
     font-size: 1.8em;
     margin-top: 20px;
 }
@@ -100,13 +100,13 @@ section:hover {
 
 /* Project Section */
 #projects h2 {
-    color: #FF80FF; /* Neon pink */
+    color: #b052ff; /* Bright purple */
     font-size: 2.5em;
     margin-bottom: 20px;
 }
 
 .project {
-    background-color: #2A2D3B; /* Dark grey background */
+    background-color: #2a1f45; /* Dark background */
     padding: 20px;
     border-radius: 15px;
     margin-bottom: 20px;
@@ -115,28 +115,28 @@ section:hover {
 
 .project h3 {
     font-size: 2em;
-    color: #FF1493; /* Hot pink */
+    color: #dc87ff; /* Lighter purple */
 }
 
 .project p {
     font-size: 1.2em;
-    color: #F1F1F1; /* Light text for contrast */
+    color: #cecece; /* Light text for contrast */
 }
 
 .project a {
     text-decoration: none;
-    color: #FF80FF; /* Neon pink links */
+    color: #b052ff; /* Bright purple links */
     font-weight: bold;
 }
 
 .project a:hover {
     text-decoration: underline;
-    color: #FF1493; /* Hot pink hover */
+    color: #dc87ff; /* Lighter purple hover */
 }
 
 /* Contact Section */
 #contact h2 {
-    color: #FF80FF; /* Neon pink */
+    color: #b052ff; /* Bright purple */
     font-size: 2.5em;
     margin-bottom: 20px;
 }
@@ -153,18 +153,18 @@ section:hover {
 
 #contact a {
     text-decoration: none;
-    color: #FF80FF; /* Neon pink links */
+    color: #b052ff; /* Bright purple links */
     font-weight: bold;
 }
 
 #contact a:hover {
-    color: #FF1493; /* Hot pink hover */
+    color: #dc87ff; /* Lighter purple hover */
 }
 
 /* Footer Section */
 footer {
-    background-color: #282C34; /* Dark grey footer */
-    color: #F1F1F1; /* Light text */
+    background-color: #6f34a1; /* Dark purple footer */
+    color: #cecece; /* Light gray text */
     text-align: center;
     padding: 15px 0;
     position: relative;
