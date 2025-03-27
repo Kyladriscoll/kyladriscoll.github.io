@@ -1,4 +1,4 @@
-// Toggle dropdown content for each project
+// JavaScript for project dropdown
 const projects = document.querySelectorAll('.project');
 
 projects.forEach(project => {
