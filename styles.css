@@ -35,7 +35,7 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    color: #4f2a85; /* Duller purple */
+    color: #6a4c79; /* Smokey deep purple */
 }
 
 /* Section Styling */
@@ -63,19 +63,19 @@ section {
 #home .hero p {
     font-size: 1.4em;
     margin-top: 0;
-    color: #4f2a85; /* Duller purple */
+    color: #6a4c79; /* Smokey deep purple */
 }
 
 /* About Section */
 h2 {
     font-size: 2.2em;
-    color: #4f2a85; /* Duller purple */
+    color: #6a4c79; /* Smokey deep purple */
     margin-bottom: 15px;
 }
 
 h3 {
     font-size: 1.8em;
-    color: #4f2a85; /* Duller purple */
+    color: #6a4c79; /* Smokey deep purple */
 }
 
 /* Projects Section */
@@ -84,7 +84,7 @@ h3 {
     border-radius: 8px;
     margin-bottom: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    background-color: #4f2a85; /* Duller purple */
+    background-color: #6a4c79; /* Smokey deep purple */
     color: #333; /* Dark grey font color */
     transition: transform 0.3s ease, background-color 0.3s;
 }
