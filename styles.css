@@ -10,7 +10,7 @@ body {
 
 /* Header Styling */
 header {
-    background-color: #8a6f98; /* Muted purple-grey */
+    background-color: #6f34a1; /* Purple background */
     padding: 20px;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -35,7 +35,7 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    color: #6a4c79; /* Smokey deep purple */
+    color: #dc87ff; /* Light Pink */
 }
 
 /* Section Styling */
@@ -49,7 +49,7 @@ section {
 
 /* Home Section */
 #home {
-    background-color: #8a6f98; /* Muted purple-grey */
+    background-color: #6f34a1;
     text-align: center;
     color: #fff;
     padding: 80px 20px;
@@ -63,19 +63,19 @@ section {
 #home .hero p {
     font-size: 1.4em;
     margin-top: 0;
-    color: #6a4c79; /* Smokey deep purple */
+    color: #b288c4;
 }
 
 /* About Section */
 h2 {
     font-size: 2.2em;
-    color: #6a4c79; /* Smokey deep purple */
+    color: #b052ff; /* Lighter Purple */
     margin-bottom: 15px;
 }
 
 h3 {
     font-size: 1.8em;
-    color: #6a4c79; /* Smokey deep purple */
+    color: #dc87ff; /* Light Pink */
 }
 
 /* Projects Section */
@@ -84,7 +84,7 @@ h3 {
     border-radius: 8px;
     margin-bottom: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    background-color: #6a4c79; /* Smokey deep purple */
+    background-color: #6f34a1; /* Same color for all projects as Project 1 */
     color: #333; /* Dark grey font color */
     transition: transform 0.3s ease, background-color 0.3s;
 }
@@ -93,7 +93,7 @@ h3 {
     transform: translateY(-10px);
 }
 
-/* Project Titles and Descriptions */
+/* Specific Styles for Project Titles and Descriptions */
 .project h3 {
     font-size: 1.6em;
     color: #fff;
@@ -105,55 +105,19 @@ h3 {
     color: #333; /* Dark grey for project description */
 }
 
-/* Dropdown Effect for Project Details */
-.project .dropdown-content {
-    display: none;
-    padding: 15px;
-    background-color: #2c2f36; /* Dark background for the dropdown */
-    border-radius: 5px;
-    color: #fff;
-}
-
-.project .dropdown-content p {
-    font-size: 1.1em;
-    margin-bottom: 10px;
-}
-
-.project .dropdown-content a {
-    color: #dc87ff; /* Lavender links in the dropdown */
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.project .show .dropdown-content {
-    display: block;
-}
-
 /* Contact Section */
 #contact {
-    background-color: #2c2f36; /* Grey background for contact */
-}
-
-#contact h2 {
-    font-size: 2.2em;
-    color: #fff;
-    margin-bottom: 20px;
-}
-
-#contact p {
-    font-size: 1.2em;
-    color: #fff;
-    margin-bottom: 20px;
+    background-color: #333;
 }
 
 #contact a {
-    color: #8a6f98; /* Muted purple-grey */
+    color: #b052ff;
     text-decoration: none;
     font-weight: bold;
 }
 
 #contact a:hover {
-    color: #dc87ff; /* Lighter lavender for hover */
+    color: #dc87ff; /* Light Pink Hover */
 }
 
 ul {
@@ -168,7 +132,7 @@ ul li {
 
 /* Footer Section */
 footer {
-    background-color: #8a6f98; /* Muted purple-grey */
+    background-color: #6f34a1;
     text-align: center;
     padding: 15px 0;
     position: fixed;
@@ -195,4 +159,4 @@ footer {
     #home .hero h1 {
         font-size: 2.5em;
     }
-}
+} 
