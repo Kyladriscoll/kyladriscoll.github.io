@@ -13,6 +13,7 @@ header {
     color: #fff; /* White text */
     padding: 20px;
     text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional: Adds a subtle shadow to make the header stand out */
 }
 
 header nav ul {
@@ -36,6 +37,7 @@ header nav ul li a {
 header nav ul li a:hover {
     color: #b052ff; /* Light purple on hover for a nice effect */
 }
+
 
 /* Home Section */
 #home {
