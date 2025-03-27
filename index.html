@@ -1,105 +1,33 @@
-/* Global Styles */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #1d1f20;
-    color: #fff;
-    transition: background-color 0.3s, color 0.3s;
-}
+<section id="projects">
+    <h2>My Projects</h2>
 
-/* Header Styling */
-header {
-    background-color: #6a4c79;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
+    <!-- Project 1 -->
+    <div class="project">
+        <h3>Project 1: Social Media Dashboard</h3>
+        <p>A web application that aggregates social media activity from multiple platforms. Built with React, Node.js, and MongoDB.</p>
+        <div class="dropdown-content">
+            <p>This project allows users to see their aggregated social media stats. Built using React for the frontend and Node.js on the backend. MongoDB handles the data.</p>
+            <a href="project1.zip" download>Download Files</a>
+        </div>
+    </div>
 
-header nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
+    <!-- Project 2 -->
+    <div class="project">
+        <h3>Project 2: E-Commerce Website</h3>
+        <p>An e-commerce platform that integrates payment processing (Stripe) and product management. Developed with Vue.js and Firebase.</p>
+        <div class="dropdown-content">
+            <p>This project is a fully functional e-commerce store, where users can browse products, add them to the cart, and checkout securely using Stripe.</p>
+            <a href="project2.zip" download>Download Files</a>
+        </div>
+    </div>
 
-header nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-header nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.2em;
-}
-
-header nav ul li a:hover {
-    color: #dc87ff;
-}
-
-/* Sections */
-section {
-    padding: 60px 40px;
-    margin: 20px 0;
-    border-radius: 8px;
-    background-color: #2c2f36;
-}
-
-/* Accordion (Project Dropdown) */
-.accordion {
-    background-color: #6a4c79;
-    color: white;
-    cursor: pointer;
-    padding: 15px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    font-size: 1.2em;
-    transition: 0.4s;
-    border-radius: 8px;
-}
-
-.accordion:hover {
-    background-color: #dc87ff;
-}
-
-.panel {
-    display: none;
-    background-color: #333;
-    overflow: hidden;
-    padding: 0 20px;
-    border-radius: 8px;
-}
-
-.panel img {
-    width: 100%;
-    max-width: 500px;
-    margin-top: 15px;
-    border-radius: 8px;
-}
-
-/* Download Button */
-.download-btn {
-    display: inline-block;
-    padding: 10px 15px;
-    background-color: #dc87ff;
-    color: #6a4c79;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-}
-
-.download-btn:hover {
-    background-color: #fff;
-    color: #6a4c79;
-}
-
-/* Footer */
-footer {
-    background-color: #6a4c79;
-    text-align: center;
-    padding: 15px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
+    <!-- Project 3 -->
+    <div class="project">
+        <h3>Project 3: Personal Finance Tracker</h3>
+        <p>A finance tracker app that helps users track their expenses and manage their budget. Built using Angular and Firebase for real-time updates.</p>
+        <div class="dropdown-content">
+            <p>This app lets users input their income and expenses, and it provides real-time updates on their budget. Built with Angular for the frontend and Firebase for backend services.</p>
+            <a href="project3.zip" download>Download Files</a>
+        </div>
+    </div>
+</section>
