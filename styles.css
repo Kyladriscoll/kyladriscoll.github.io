@@ -5,6 +5,7 @@ body {
     color: #fff; /* White text for readability */
     margin: 0;
     padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 /* Header Section */
@@ -14,6 +15,9 @@ header {
     padding: 20px;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Darker shadow for depth */
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 header nav ul {
@@ -32,11 +36,12 @@ header nav ul li a {
     text-decoration: none;
     font-size: 18px; /* Larger font for readability */
     font-weight: bold; /* Bold links for emphasis */
-    transition: color 0.3s ease; /* Smooth transition for hover effect */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effect */
 }
 
 header nav ul li a:hover {
     color: #dc87ff; /* Light purple on hover */
+    transform: scale(1.1); /* Slightly enlarge text on hover */
 }
 
 /* Home Section */
@@ -44,11 +49,13 @@ header nav ul li a:hover {
     padding: 80px 20px;
     text-align: center;
     background-color: #6f34a1; /* Dark purple background */
+    animation: fadeIn 2s ease-in-out; /* Smooth fade-in animation */
 }
 
 #home .hero h1 {
     font-size: 36px;
     color: #fff;
+    animation: popUp 1.5s ease-in-out; /* Animate the title with a popping effect */
 }
 
 #home .hero p {
@@ -60,11 +67,13 @@ header nav ul li a:hover {
 #about {
     background-color: #2e1b63; /* Slightly darker background for contrast */
     padding: 40px 20px;
+    animation: slideUp 1s ease-out;
 }
 
 #about h2 {
     font-size: 30px;
     color: #b052ff; /* Vibrant purple title */
+    animation: slideIn 1s ease-in-out;
 }
 
 #about p {
@@ -82,11 +91,13 @@ header nav ul li a:hover {
 #projects {
     background-color: #1a1a1a;
     padding: 40px 20px;
+    animation: fadeIn 2s ease-in-out;
 }
 
 #projects h2 {
     font-size: 30px;
     color: #b052ff; /* Vibrant purple title */
+    animation: slideIn 1s ease-in-out;
 }
 
 .project {
@@ -94,6 +105,12 @@ header nav ul li a:hover {
     padding: 20px;
     background-color: #2e1b63;
     border-radius: 8px;
+    transition: transform 0.3s ease; /* Make the projects grow when hovered */
+}
+
+.project:hover {
+    transform: translateY(-10px); /* Lift the project card */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .project h3 {
@@ -110,6 +127,7 @@ header nav ul li a:hover {
     color: #dc87ff; /* Bright light purple link */
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 .project a:hover {
@@ -120,6 +138,7 @@ header nav ul li a:hover {
 #contact {
     background-color: #6f34a1;
     padding: 40px 20px;
+    animation: slideUp 1s ease-out;
 }
 
 #contact h2 {
@@ -145,6 +164,7 @@ header nav ul li a:hover {
     color: #b052ff; /* Purple links */
     text-decoration: none;
     font-size: 16px;
+    font-weight: bold;
 }
 
 #contact ul li a:hover {
@@ -169,6 +189,51 @@ a {
 
 a:hover {
     color: #dc87ff;
+}
+
+/* Animations for Sections */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes popUp {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 /* Add responsiveness for smaller screens */
