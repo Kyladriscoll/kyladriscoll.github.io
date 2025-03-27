@@ -54,7 +54,7 @@ header nav ul li a:hover {
     text-align: center;
     background-color: #6f34a1;
     animation: fadeIn 2s ease-in-out;
-    background-image: url('home-bg.jpg');
+    background-image: url('home-bg.jpg'); /* Add your own background image */
     background-size: cover;
     background-position: center;
     color: #fff;
@@ -126,17 +126,6 @@ header nav ul li a:hover {
 .project p {
     font-size: 16px;
     color: #b288c4;
-}
-
-.project a {
-    color: #dc87ff;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-.project a:hover {
-    color: #fff;
 }
 
 /* Contact Section */
@@ -283,11 +272,7 @@ a:hover {
         font-size: 30px;
     }
 
-    #home .hero p {
-        font-size: 18px;
-    }
-
-    #contact input, #contact textarea {
-        width: 250px;
+    #about, #projects, #contact {
+        padding: 60px 20px;
     }
 }
