@@ -1,14 +1,16 @@
 /* Global Styles */
 body {
-    background-color: #181818;  /* Dark background color */
-    color: #e0e0e0;  /* Light gray text color */
-    font-family: Arial, sans-serif;
+    background-color: #181818; /* Dark background for the whole page */
+    color: #e0e0e0; /* Light text color */
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    line-height: 1.6;
+    scroll-behavior: smooth;
 }
 
 header {
-    background-color: #3a2a57;  /* Smoky dark purple */
+    background-color: #3a2a57; /* Smoky dark purple for the header */
     padding: 20px;
     text-align: center;
 }
@@ -25,75 +27,82 @@ header nav ul li {
 }
 
 header nav ul li a {
-    color: #e0e0e0;
+    color: #e0e0e0; /* Light grey links */
     text-decoration: none;
     font-size: 1.2em;
 }
 
 header nav ul li a:hover {
-    color: #dc87ff;  /* Light lavender on hover */
+    color: #b56cb6; /* Softer smoky purple on hover */
 }
 
 /* Section Styling */
 section {
-    padding: 60px 40px;
+    padding: 80px 40px;
     margin: 20px 0;
-    background-color: #2b2b2b;  /* Dark grey background */
+    background-color: #242424; /* Dark grey background for sections */
     border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 section h2 {
     font-size: 2.2em;
-    color: #dc87ff;  /* Light lavender for headings */
-}
-
-/* Projects Section */
-.project {
-    background-color: #3a2a57;  /* Smoky dark purple */
-    padding: 15px;
+    color: #b56cb6; /* Smoky purple for section headings */
     margin-bottom: 20px;
-    cursor: pointer;
+}
+
+section p {
+    font-size: 1.2em;
+    color: #e0e0e0;
+    margin-bottom: 20px;
+}
+
+/* Project Styling */
+.project {
+    background-color: #3a2a57; /* Smoky dark purple for projects */
+    padding: 20px;
+    margin-bottom: 20px;
     border-radius: 8px;
-    transition: background-color 0.3s ease;
 }
 
-.project:hover {
-    background-color: #5c3b80;  /* Slightly lighter purple on hover */
+.project-title {
+    font-size: 1.8em;
+    color: #fff;
+    margin-bottom: 10px;
 }
 
-/* Dropdown Content */
-.dropdown-content {
-    display: none;
-    padding-top: 10px;
+.project-description {
     font-size: 1.1em;
     color: #e0e0e0;
-    margin-top: 10px;
 }
 
-.project:hover .dropdown-content {
-    display: block;
-}
-
-/* Resume Section */
-#resume a {
-    color: #dc87ff;  /* Light lavender */
+/* Contact Section */
+#contact a {
+    color: #b56cb6; /* Smoky purple for links */
     text-decoration: none;
     font-weight: bold;
 }
 
-#resume a:hover {
-    color: #e0e0e0;  /* Light grey on hover */
+#contact a:hover {
+    color: #e0e0e0; /* Light grey on hover */
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    margin: 8px 0;
 }
 
 /* Footer Section */
 footer {
-    background-color: #3a2a57;  /* Smoky dark purple */
+    background-color: #3a2a57; /* Smoky purple for footer */
     padding: 15px 0;
     text-align: center;
     color: #e0e0e0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
 }
 
 /* Responsive Design */
@@ -105,5 +114,9 @@ footer {
 
     section {
         padding: 40px 20px;
+    }
+
+    footer {
+        font-size: 0.8em;
     }
 }
