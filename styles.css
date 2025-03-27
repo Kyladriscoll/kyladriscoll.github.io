@@ -1,19 +1,19 @@
-/* General body styling */
+/* General Body Styling */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a; /* Dark background for the page */
+    color: #fff; /* White text for readability */
     margin: 0;
     padding: 0;
-    background-color: #2a2a2a; /* Dark background for a dark mode theme */
-    color: #fff; /* White text color for contrast */
 }
 
 /* Header Section */
 header {
-    background-color: #6f34a1; /* Dark purple */
+    background-color: #b052ff; /* Lighter vibrant purple */
     color: #fff; /* White text */
     padding: 20px;
     text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional: Adds a subtle shadow to make the header stand out */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Darker shadow for depth */
 }
 
 header nav ul {
@@ -30,100 +30,106 @@ header nav ul li {
 header nav ul li a {
     color: #fff; /* White text */
     text-decoration: none;
-    font-size: 18px; /* Larger font size for better readability */
-    font-weight: bold; /* Bold for emphasis */
+    font-size: 18px; /* Larger font for readability */
+    font-weight: bold; /* Bold links for emphasis */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
 }
 
 header nav ul li a:hover {
-    color: #b052ff; /* Light purple on hover for a nice effect */
+    color: #dc87ff; /* Light purple on hover */
 }
-
 
 /* Home Section */
 #home {
-    padding: 50px;
-    background-color: #333; /* Dark background for home section */
+    padding: 80px 20px;
     text-align: center;
+    background-color: #6f34a1; /* Dark purple background */
 }
 
-.hero h1 {
+#home .hero h1 {
     font-size: 36px;
-    margin: 0;
-    color: #dc87ff; /* Light purple text */
+    color: #fff;
 }
 
-.hero p {
+#home .hero p {
     font-size: 20px;
-    color: #b288c4; /* Soft purple */
+    color: #b288c4; /* Lighter purple for description */
 }
 
 /* About Section */
 #about {
-    padding: 30px;
-    background-color: #444; /* Slightly lighter dark background */
+    background-color: #2e1b63; /* Slightly darker background for contrast */
+    padding: 40px 20px;
 }
 
 #about h2 {
-    font-size: 28px;
-    color: #b052ff; /* Light purple for section title */
+    font-size: 30px;
+    color: #b052ff; /* Vibrant purple title */
 }
 
 #about p {
     font-size: 18px;
-    color: #cecece; /* Soft grey text for paragraph */
+    line-height: 1.6;
+    color: #cecece; /* Light gray for text */
+}
+
+#about h3 {
+    font-size: 24px;
+    color: #dc87ff; /* Lighter purple for subsections */
 }
 
 /* Projects Section */
 #projects {
-    padding: 30px;
-    background-color: #555; /* Lighter background for projects section */
+    background-color: #1a1a1a;
+    padding: 40px 20px;
 }
 
 #projects h2 {
-    font-size: 28px;
-    color: #b052ff; /* Light purple for section title */
+    font-size: 30px;
+    color: #b052ff; /* Vibrant purple title */
 }
 
 .project {
-    margin-bottom: 20px;
-    background-color: #333; /* Dark background for each project */
-    padding: 15px;
-    border-radius: 5px;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #2e1b63;
+    border-radius: 8px;
 }
 
 .project h3 {
-    font-size: 24px;
-    color: #dc87ff; /* Light purple for project title */
+    font-size: 22px;
+    color: #fff;
 }
 
 .project p {
     font-size: 16px;
-    color: #cecece; /* Soft grey for project description */
+    color: #b288c4; /* Light purple text */
 }
 
 .project a {
-    color: #b052ff; /* Light purple for links */
+    color: #dc87ff; /* Bright light purple link */
     text-decoration: none;
+    font-weight: bold;
 }
 
 .project a:hover {
-    color: #dc87ff; /* Change link color on hover */
+    color: #fff; /* White text on hover */
 }
 
 /* Contact Section */
 #contact {
-    padding: 30px;
-    background-color: #444; /* Lighter dark background for contact */
+    background-color: #6f34a1;
+    padding: 40px 20px;
 }
 
 #contact h2 {
-    font-size: 28px;
-    color: #b052ff; /* Light purple for section title */
+    font-size: 30px;
+    color: #fff;
 }
 
 #contact p {
     font-size: 18px;
-    color: #cecece; /* Soft grey text */
+    color: #cecece; /* Light gray for contact info */
 }
 
 #contact ul {
@@ -132,14 +138,23 @@ header nav ul li a:hover {
 }
 
 #contact ul li {
-    font-size: 18px;
-    color: #b288c4; /* Soft purple for contact links */
+    margin-bottom: 10px;
+}
+
+#contact ul li a {
+    color: #b052ff; /* Purple links */
+    text-decoration: none;
+    font-size: 16px;
+}
+
+#contact ul li a:hover {
+    color: #dc87ff; /* Lighter purple on hover */
 }
 
 /* Footer Section */
 footer {
-    background-color: #333; /* Dark footer background */
-    color: #fff; /* White text for footer */
+    background-color: #1a1a1a;
+    color: #fff;
     text-align: center;
     padding: 10px;
     position: fixed;
@@ -147,26 +162,20 @@ footer {
     bottom: 0;
 }
 
-/* Responsive adjustments for smaller screens */
+/* Additional Styling for Links and Buttons */
+a {
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #dc87ff;
+}
+
+/* Add responsiveness for smaller screens */
 @media (max-width: 768px) {
     header nav ul li {
         display: block;
-        margin: 10px 0;
-    }
-
-    .hero h1 {
-        font-size: 28px;
-    }
-
-    .hero p {
-        font-size: 18px;
-    }
-
-    .project h3 {
-        font-size: 20px;
-    }
-
-    .project p {
-        font-size: 14px;
+        margin-right: 0;
+        margin-bottom: 10px;
     }
 }
