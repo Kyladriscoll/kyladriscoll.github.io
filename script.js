@@ -1,11 +1,13 @@
-// Toggle dropdown content
-function toggleDropdown(projectId) {
-    const projectContent = document.getElementById(projectId);
+// Toggle dropdown content for each project
+const projects = document.querySelectorAll('.project');
 
-    // Toggle the display of the content
-    if (projectContent.style.display === 'none' || projectContent.style.display === '') {
-        projectContent.style.display = 'block';
-    } else {
-        projectContent.style.display = 'none';
-    }
-}
+projects.forEach(project => {
+    project.addEventListener('click', () => {
+        const dropdown = project.querySelector('.dropdown-content');
+        if (dropdown.style.display === 'none' || dropdown.style.display === '') {
+            dropdown.style.display = 'block';
+        } else {
+            dropdown.style.display = 'none';
+        }
+    });
+});
