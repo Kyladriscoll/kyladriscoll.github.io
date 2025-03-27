@@ -79,6 +79,10 @@ h3 {
 }
 
 /* Projects Section */
+#projects {
+    margin: 20px 0;
+}
+
 #projects .project {
     padding: 20px;
     border-radius: 8px;
@@ -94,7 +98,6 @@ h3 {
     transform: translateY(-10px);
 }
 
-/* Project Titles and Descriptions */
 .project h3 {
     font-size: 1.6em;
     color: #fff;
@@ -106,7 +109,7 @@ h3 {
     color: #333; /* Dark grey for project description */
 }
 
-/* Dropdown Effect */
+/* Dropdown Effect for Project Details */
 .project .dropdown-content {
     display: none;
     padding: 15px;
