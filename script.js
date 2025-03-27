@@ -1,7 +1,11 @@
-// JavaScript to toggle the dropdown content
-document.querySelectorAll('.project-title').forEach((title) => {
-    title.addEventListener('click', function() {
-        const dropdownContent = this.nextElementSibling.querySelector('.dropdown-content');
-        dropdownContent.classList.toggle('show');
-    });
-});
+// Toggle dropdown content
+function toggleDropdown(projectId) {
+    const projectContent = document.getElementById(projectId);
+
+    // Toggle the display of the content
+    if (projectContent.style.display === 'none' || projectContent.style.display === '') {
+        projectContent.style.display = 'block';
+    } else {
+        projectContent.style.display = 'none';
+    }
+}
