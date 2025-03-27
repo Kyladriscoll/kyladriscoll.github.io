@@ -87,27 +87,38 @@ h3 {
     background-color: #6a4c79; /* Smokey deep purple */
     color: #333; /* Dark grey font color */
     transition: transform 0.3s ease, background-color 0.3s;
+    text-align: center;
+}
+
+#projects .project img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 8px;
+    margin: 15px 0;
 }
 
 #projects .project:hover {
     transform: translateY(-10px);
 }
 
-/* Project Titles and Descriptions */
-.project h3 {
-    font-size: 1.6em;
+.download-btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #8a6f98;
     color: #fff;
-    margin-bottom: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
 }
 
-.project p {
-    font-size: 1.1em;
-    color: #333; /* Dark grey for project description */
+.download-btn:hover {
+    background-color: #6a4c79;
 }
 
 /* Contact Section */
 #contact {
     background-color: #2c2f36; /* Grey background for contact */
+    text-align: center;
 }
 
 #contact h2 {
