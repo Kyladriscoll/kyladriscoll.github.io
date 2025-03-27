@@ -1,14 +1,2 @@
-// Toggle the project details on hover
-const projects = document.querySelectorAll('.project');
-
-projects.forEach(project => {
-    project.addEventListener('mouseover', () => {
-        const details = project.querySelector('.project-details');
-        details.style.display = 'block';
-    });
-
-    project.addEventListener('mouseout', () => {
-        const details = project.querySelector('.project-details');
-        details.style.display = 'none';
-    });
-});
+// This script is used to add any interactive elements, like animations or hover effects.
+// For now, it's kept simple but you can add more complex interactions as needed.
