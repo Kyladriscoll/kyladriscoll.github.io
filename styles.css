@@ -48,16 +48,50 @@ header nav ul li a:hover {
     transform: scale(1.1);
 }
 
+/* Section Styling (Button-Like Effect) */
+section {
+    position: relative;
+    background-color: #2e1b63;
+    padding: 60px 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    z-index: 0;
+}
+
+section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+section h2 {
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 18px;
+    color: #cecece;
+    line-height: 1.6;
+    text-align: center;
+}
+
 /* Home Section */
 #home {
     padding: 100px 20px;
     text-align: center;
     background-color: #6f34a1;
-    animation: fadeIn 2s ease-in-out;
     background-image: url('home-bg.jpg'); /* Add your own background image */
     background-size: cover;
     background-position: center;
     color: #fff;
+    border-radius: 8px;
 }
 
 #home .hero h1 {
@@ -84,15 +118,8 @@ header nav ul li a:hover {
     animation: slideIn 1s ease-in-out;
 }
 
-#about p {
-    font-size: 18px;
-    color: #cecece;
-    line-height: 1.6;
-}
-
 /* Projects Section */
 #projects {
-    background-color: #1a1a1a;
     padding: 40px 20px;
     animation: fadeIn 2s ease-in-out;
 }
@@ -130,7 +157,6 @@ header nav ul li a:hover {
 
 /* Contact Section */
 #contact {
-    background-color: #6f34a1;
     padding: 60px 20px;
     animation: slideUp 1s ease-out;
     color: #fff;
