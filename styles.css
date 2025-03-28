@@ -102,12 +102,26 @@ header nav a:hover {
     border-radius: 5px;
     color: #D6A3E1;
     font-size: 1.2rem;
-    transition: background-color 0.3s ease;
+    text-decoration: none; /* Ensures the link doesn't have underlines */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Added transform for smooth scaling */
     margin-bottom: 30px; /* Added margin to create spacing below the resume button */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adds depth */
 }
 
 #about .bio-container .resume-link:hover {
     background-color: #5C4B8B;
+    transform: scale(1.05); /* Slight scaling effect on hover for better interactivity */
+}
+
+#about .bio-container .resume-link:focus {
+    outline: none; /* Removes the default outline */
+    border: 2px solid #D6A3E1; /* Adds a custom outline for focus state */
+    box-shadow: 0 0 10px rgba(214, 163, 225, 0.8); /* Highlight effect when focused */
+}
+
+#about .bio-container .resume-link:active {
+    transform: scale(0.98); /* Slight shrink effect when clicked */
+    background-color: #3B3071; /* Darker shade on active click */
 }
 
 /* Media Query for Smaller Screens (Tablets & Mobiles) */
