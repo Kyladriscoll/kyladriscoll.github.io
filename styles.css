@@ -46,6 +46,20 @@ body {
     padding-top: 100px; /* Adjust this based on the height of your header */
 }
 
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #121212;
+    color: #F5F5F5;
+}
+
 /* About Me Section with Ombre Background */
 #about {
     padding: 50px 20px;
@@ -78,6 +92,7 @@ body {
     text-align: left;
     flex-wrap: wrap;
     margin-top: 40px;
+    padding: 0 20px; /* Added padding for smaller screen sizes */
 }
 
 #about .bio-container img {
@@ -86,6 +101,7 @@ body {
     height: 200px;
     object-fit: cover;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
 }
 
 /* Bio Text Styling */
@@ -94,6 +110,8 @@ body {
     text-align: left;
     line-height: 1.6;
     margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #about .bio-container .bio-text p {
@@ -116,6 +134,66 @@ body {
 #about .bio-container .resume-link:hover {
     background-color: #5C4B8B;
 }
+
+/* Media Query for Smaller Screens (Tablets & Mobiles) */
+@media (max-width: 768px) {
+    #about h2 {
+        font-size: 2rem;
+    }
+
+    #about .bio-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #about .bio-container img {
+        width: 150px;
+        height: 150px;
+    }
+
+    #about .bio-container .bio-text {
+        max-width: 90%;
+        text-align: center;
+    }
+
+    #about .bio-container .resume-link {
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+
+    #about p {
+        font-size: 1rem;
+        max-width: 90%;
+    }
+}
+
+/* Media Query for Very Small Screens (Mobile Portrait) */
+@media (max-width: 480px) {
+    #about h2 {
+        font-size: 1.5rem;
+    }
+
+    #about .bio-container img {
+        width: 120px;
+        height: 120px;
+    }
+
+    #about .bio-container .bio-text {
+        max-width: 90%;
+        font-size: 1rem;
+    }
+
+    #about .bio-container .resume-link {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+
+    #about p {
+        font-size: 0.9rem;
+        max-width: 90%;
+    }
+}
+
 
 
 /* Portfolio Section */
