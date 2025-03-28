@@ -25,6 +25,10 @@
             color: #fff;
             text-align: center;
             padding: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;  /* Ensures the header stays on top of other content */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Optional shadow for visual depth */
         }
 
         header h1 {
@@ -41,6 +45,58 @@
 
         header nav a:hover {
             color: #D6A3E1;
+        }
+
+        /* About Me Section with Ombre Background */
+        #about {
+            padding: 50px 20px;
+            text-align: center;
+            background: linear-gradient(180deg, #5C4B8B, #121212);
+            color: #F5F5F5;
+        }
+
+        #about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        #about p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        #about .bio-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+        }
+
+        #about .bio-container img {
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        #about .bio-container .bio-text {
+            max-width: 600px;
+            text-align: left;
+        }
+
+        #about .bio-container .resume-link {
+            text-decoration: none;
+            color: #D6A3E1;
+            font-size: 1.2rem;
+            margin-top: 20px;
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #444;
+            border-radius: 5px;
+        }
+
+        #about .bio-container .resume-link:hover {
+            background-color: #5C4B8B;
         }
 
         /* Portfolio Section */
@@ -150,56 +206,6 @@
             margin-top: 50px;
         }
 
-        /* About Section */
-        #about {
-            padding: 50px 20px;
-            background-color: #2A2A2A;
-            text-align: center;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        #about h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            color: #D6A3E1;
-        }
-
-        #about p {
-            font-size: 1.2rem;
-            color: #F5F5F5;
-            line-height: 1.6;
-        }
-
-        /* Contact Section */
-        #contact {
-            padding: 50px 20px;
-            background-color: #2A2A2A;
-            text-align: center;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        #contact h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            color: #D6A3E1;
-        }
-
-        #contact p {
-            font-size: 1.2rem;
-            color: #F5F5F5;
-            line-height: 1.6;
-        }
-
-        #contact a {
-            color: #5C4B8B;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        #contact a:hover {
-            color: #D6A3E1;
-        }
-
     </style>
 </head>
 <body>
@@ -214,13 +220,22 @@
         </nav>
     </header>
 
-    <!-- About Section -->
-    <div class="portfolio-section" id="about">
-        <h2>About Me</h2>
-        <p>
-            Hi, I'm Kyla! I am a passionate narrative designer with experience in creating immersive narratives and engaging gameplay. I specialize in narrative design, storytelling, and social media content creation.
-        </p>
+ <!-- About Me Section -->
+<section id="about">
+    <h2>About Me</h2>
+    <p>Thanks for stopping by! My name is Kyla, and I am a passionate Narrative Designer!</p>
+    <p>In my free time, I am a mentor and alumni of FIRST Robotics Competitions, who volunteers as a judge at competitions.</p>
+    <div class="bio-container">
+        <!-- Bio Image -->
+        <img src="478821730_1794211681122386_8328149616478346293_n.jpg" alt="Your Bio Picture">
+
+        <!-- About My Journey Text -->
+        <div class="bio-text">
+            <p><strong>About my journey:</strong> Ever since I was a young girl, I have enjoyed gaming. Growing up, my family would play tabletop games with our meals, teaching us kids how to problem solve and critically think. However, my passion for gaming did not stop there. As I grew older, my father and I would create board games together, creating unique game mechanics based off of our most beloved games.</p>
+            <a href="K.Driscoll_Resume.pdf" class="resume-link" target="_blank">Download My Resume</a>
+        </div>
     </div>
+</section>
 
     <!-- Portfolio Section -->
     <div class="portfolio-section" id="projects">
@@ -233,7 +248,7 @@
 
             <!-- Narrative Project Details -->
             <details>
-                <summary>Echoes of the Salt Flats: Tabletop Role-playing Game (TTRPG)</summary>
+                <summary>Game Story 1: Adventure in a fantasy world</summary>
                 <p>This narrative explores a high-fantasy adventure where players journey through magical lands, encountering mythical creatures and solving ancient mysteries.</p>
             </details>
 
@@ -289,14 +304,6 @@
                 </div>
             </div>
         </div>
-    </div>
-
-    <!-- Contact Section -->
-    <div class="portfolio-section" id="contact">
-        <h2>Contact</h2>
-        <p>If you'd like to connect or collaborate, feel free to reach out!</p>
-        <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/yourname" target="_blank">yourname</a></p>
     </div>
 
     <!-- Footer Section -->

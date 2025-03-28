@@ -1,214 +1,226 @@
-/* General Styles */
-body {
-    font-family: 'Arial', sans-serif;
+/* General Reset */
+* {
     margin: 0;
     padding: 0;
-    background-color: #13141F; /* Dark background */
-    color: #FFFFFF; /* White text */
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
     line-height: 1.6;
+    background-color: #121212;
+    color: #F5F5F5;
 }
 
-.container {
-    width: 90%;
-    margin: 0 auto;
-}
-
-/* Header */
+/* Header Section - Sticky */
 header {
-    background-color: #6C4F91; /* Purple tone */
-    padding: 20px;
+    background: #5C4B8B;
+    color: #fff;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    position: fixed; /* Makes the header stick at the top */
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Keeps the header above other content */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
-    font-size: 36px;
-    margin: 0;
-    color: #F5F5F5;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
 }
 
-header nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin-top: 10px;
-}
-
-header nav ul li {
-    display: inline-block;
-    margin-right: 20px;
-}
-
-header nav ul li a {
-    color: #F5F5F5;
+header nav a {
+    color: #fff;
+    margin: 0 15px;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 1.1rem;
 }
 
-header nav ul li a:hover {
-    color: #FF6F61; /* Soft Pink */
-    text-decoration: underline;
+header nav a:hover {
+    color: #D6A3E1;
 }
 
-/* About Section */
+/* Add top padding to the body to prevent content from being hidden behind the fixed header */
+body {
+    padding-top: 100px; /* Adjust this based on the height of your header */
+}
+
+/* About Me Section with Ombre Background */
 #about {
-    padding: 40px 0;
-    background-color: #2A2A2A; /* Darker background */
+    padding: 50px 20px;
+    text-align: center;
+    background: linear-gradient(180deg, #5C4B8B, #121212);
+    color: #F5F5F5;
 }
 
 #about h2 {
-    text-align: center;
-    font-size: 32px;
-    margin-bottom: 10px;
-    color: #FF6F61; /* Soft Pink */
-}
-
-#about p {
-    text-align: center;
-    font-size: 18px;
-    margin-top: 20px;
-}
-
-/* Projects Section */
-#projects {
-    padding: 40px 0;
-}
-
-#projects h2 {
-    text-align: center;
-    font-size: 32px;
-    margin-bottom: 40px;
-    color: #FF6F61; /* Soft Pink */
-}
-
-details {
-    margin-bottom: 30px;
-    padding: 15px;
-    background-color: #3A3A3A; /* Slightly lighter background */
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-details summary {
-    font-size: 24px;
-    cursor: pointer;
-    color: #F5F5F5;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
     font-weight: bold;
 }
 
-details summary:hover {
-    color: #FF6F61; /* Soft Pink */
+#about p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-details p {
-    font-size: 18px;
+/* Bio Container Layout */
+#about .bio-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    text-align: left;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+#about .bio-container img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Bio Text Styling */
+#about .bio-container .bio-text {
+    max-width: 600px;
+    text-align: left;
+    line-height: 1.6;
     margin-top: 10px;
+}
+
+#about .bio-container .bio-text p {
+    margin-bottom: 20px;
+}
+
+/* Resume Link Button */
+#about .bio-container .resume-link {
+    text-decoration: none;
+    color: #D6A3E1;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #444;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#about .bio-container .resume-link:hover {
+    background-color: #5C4B8B;
+}
+
+
+/* Portfolio Section */
+.portfolio-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #2A2A2A;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+}
+
+.portfolio-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #D6A3E1;
+}
+
+/* Project Subsections */
+.project-subsection {
+    margin-top: 30px;
+    padding: 30px;
+    background-color: #333;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.project-subsection h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #D6A3E1;
+}
+
+/* Narrative Details */
+details {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #444;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+details summary {
+    font-size: 1.5rem;
+    color: #F5F5F5;
+}
+
+details:hover {
+    background-color: #5C4B8B;
 }
 
 /* Instagram Carousel */
 .carousel-container {
-    margin-top: 30px;
-}
-
-.carousel-container h3 {
-    font-size: 24px;
-    text-align: center;
-    margin-bottom: 20px;
-    color: #F5F5F5;
-}
-
-.carousel img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.slick-dots {
-    text-align: center;
-    margin-top: 10px;
-}
-
-.slick-dots li button:before {
-    font-size: 12px;
-    color: #F5F5F5;
-}
-
-.slick-dots li.slick-active button:before {
-    color: #FF6F61; /* Soft Pink */
-}
-
-/* Contact Section */
-#contact {
-    padding: 40px 0;
-    background-color: #2A2A2A; /* Darker background */
-    text-align: center;
-    color: #F5F5F5;
-}
-
-#contact h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-}
-
-#contact p {
-    font-size: 18px;
-    margin-top: 20px;
-}
-
-#contact ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-#contact ul li {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-#contact ul li a {
-    color: #FF6F61; /* Soft Pink */
-    text-decoration: none;
-}
-
-#contact ul li a:hover {
-    text-decoration: underline;
-}
-
-/* Footer */
-footer {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
     padding: 20px;
-    background-color: #13141F; /* Dark background */
+    justify-content: center;
+    scroll-snap-type: x mandatory;
+    flex-wrap: nowrap;
+    box-sizing: border-box;
+}
+
+.carousel-item {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #444;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Instagram Embeds */
+.instagram-embed {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Fix for Instagram posts inside carousel */
+.carousel-item blockquote {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Footer Section */
+footer {
     text-align: center;
-}
-
-footer p {
-    font-size: 16px;
-    color: #F5F5F5;
-}
-
-/* Media Queries for Mobile Responsiveness */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 28px;
-    }
-
-    header nav ul li {
-        margin-right: 10px;
-    }
-
-    header nav ul li a {
-        font-size: 16px;
-    }
-
-    #about h2, #projects h2, #contact h2 {
-        font-size: 28px;
-    }
-
-    #about p, #projects p, #contact p {
-        font-size: 16px;
-    }
-
-    .carousel img {
-        border-radius: 8px;
-    }
+    background: #121212;
+    color: #fff;
+    padding: 20px;
+    margin-top: 50px;
 }
