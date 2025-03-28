@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="styles.css">
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Slick Carousel CSS (for carousel styling) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
 </head>
 
 <body>
@@ -15,7 +18,7 @@
     <!-- Header -->
     <header>
         <div class="container">
-            <h1>Kyla Driscoll</h1>
+            <h1>Your Name</h1>
             <nav>
                 <ul>
                     <li><a href="#about">About</a></li>
@@ -30,7 +33,7 @@
     <section id="about">
         <div class="container">
             <h2>About Me</h2>
-            <p>Hi! I'm [Kyla Driscoll], a passionate developer/designer. I specialize in web development, design, and creative projects. With years of experience and a love for learning, I always strive to create intuitive, responsive, and visually stunning digital experiences.</p>
+            <p>Hi! I'm a passionate developer/designer. I specialize in web development, design, and creative projects. With years of experience and a love for learning, I always strive to create intuitive, responsive, and visually stunning digital experiences.</p>
         </div>
     </section>
 
@@ -39,17 +42,35 @@
         <div class="container">
             <h2><i class="fas fa-star"></i> Projects</h2>
 
-            <!-- Marketing Section -->
+            <!-- Marketing Section with Instagram Carousel -->
             <details>
                 <summary><i class="fas fa-bullhorn"></i> Marketing</summary>
-                <details>
-                    <summary><i class="fas fa-pencil-alt"></i> Marketing Campaign 1</summary>
-                    <p>Details about the campaign, its goals, and outcome.</p>
-                </details>
-                <details>
-                    <summary><i class="fas fa-chart-line"></i> Marketing Campaign 2</summary>
-                    <p>Details about the campaign, its goals, and outcome.</p>
-                </details>
+                <div class="carousel-container">
+                    <h3>Check out our Instagram Marketing Campaigns</h3>
+                    <div class="carousel">
+                        <!-- Instagram Links as Slides -->
+                        <div>
+                            <a href="https://www.instagram.com/p/Cp7p4h7MSBv/" target="_blank">
+                                <img src="https://via.placeholder.com/400x300?text=Instagram+Post+1" alt="Instagram Post 1">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://www.instagram.com/p/Cp7dFgHMGXj/" target="_blank">
+                                <img src="https://via.placeholder.com/400x300?text=Instagram+Post+2" alt="Instagram Post 2">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://www.instagram.com/p/Cp6xwFqMTF1/" target="_blank">
+                                <img src="https://via.placeholder.com/400x300?text=Instagram+Post+3" alt="Instagram Post 3">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://www.instagram.com/p/Cp6y0Upg9Uq/" target="_blank">
+                                <img src="https://via.placeholder.com/400x300?text=Instagram+Post+4" alt="Instagram Post 4">
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </details>
 
             <!-- Narrative Design Section -->
@@ -74,8 +95,8 @@
             <h2>Contact Me</h2>
             <p>If you'd like to work together, collaborate, or just want to say hello, feel free to reach out!</p>
             <ul>
-                <li>Email: <a href="mailto:kylacdriscoll@gmail.com">kylacdriscoll@gmail.com</a></li>
-                <li>LinkedIn: <a href="https://www.linkedin.com/in/kyladriscoll" target="_blank">LinkedIn Profile</a></li>
+                <li>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></li>
+                <li>LinkedIn: <a href="https://www.linkedin.com/in/your-profile" target="_blank">LinkedIn Profile</a></li>
             </ul>
         </div>
     </section>
@@ -83,9 +104,26 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2025 Kyla Driscoll</p>
+            <p>&copy; 2025 Your Name</p>
         </div>
     </footer>
+
+    <!-- Slick Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('.carousel').slick({
+                infinite: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                dots: true,
+            });
+        });
+    </script>
 
 </body>
 
