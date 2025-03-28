@@ -1,6 +1,6 @@
 /* Global Styles */
 body {
-    background-color: #181818; /* Dark background for the whole page */
+    background-color: #181818; /* Dark background */
     color: #e0e0e0; /* Light text color */
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -10,7 +10,7 @@ body {
 }
 
 header {
-    background-color: #3a2a57; /* Smoky dark purple for the header */
+    background-color: #3a2a57; /* Smoky dark purple */
     padding: 20px;
     text-align: center;
 }
@@ -33,7 +33,7 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    color: #b56cb6; /* Softer smoky purple on hover */
+    color: #b56cb6; /* Softer purple on hover */
 }
 
 /* Section Styling */
