@@ -1,130 +1,308 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <!-- Slick Carousel CSS (for carousel styling) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
-</head>
+    <title>Your Gamer Portfolio</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #121212;
+            color: #F5F5F5;
+        }
+
+        /* Header Section */
+        header {
+            background: #5C4B8B;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        header nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+
+        header nav a:hover {
+            color: #D6A3E1;
+        }
+
+        /* Portfolio Section */
+        .portfolio-section {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #2A2A2A;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+
+        .portfolio-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #D6A3E1;
+        }
+
+        /* Project Subsections */
+        .project-subsection {
+            margin-top: 30px;
+            padding: 30px;
+            background-color: #333;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .project-subsection h3 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #D6A3E1;
+        }
+
+        /* Narrative Details */
+        details {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #444;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        details summary {
+            font-size: 1.5rem;
+            color: #F5F5F5;
+        }
+
+        details:hover {
+            background-color: #5C4B8B;
+        }
+
+        /* Instagram Carousel */
+        .carousel-container {
+            display: flex;
+            overflow-x: auto;
+            gap: 20px;
+            padding: 20px;
+            justify-content: center;
+            scroll-snap-type: x mandatory;
+            flex-wrap: nowrap;
+            box-sizing: border-box;
+        }
+
+        .carousel-item {
+            flex: 0 0 auto;
+            scroll-snap-align: start;
+            width: 300px;
+            height: 300px;
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: #444;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        /* Instagram Embeds */
+        .instagram-embed {
+            width: 100%;
+            height: 100%;
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        /* Fix for Instagram posts inside carousel */
+        .carousel-item blockquote {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Footer Section */
+        footer {
+            text-align: center;
+            background: #121212;
+            color: #fff;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        /* About Section */
+        #about {
+            padding: 50px 20px;
+            background-color: #2A2A2A;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #D6A3E1;
+        }
+
+        #about p {
+            font-size: 1.2rem;
+            color: #F5F5F5;
+            line-height: 1.6;
+        }
+
+        /* Contact Section */
+        #contact {
+            padding: 50px 20px;
+            background-color: #2A2A2A;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #D6A3E1;
+        }
+
+        #contact p {
+            font-size: 1.2rem;
+            color: #F5F5F5;
+            line-height: 1.6;
+        }
+
+        #contact a {
+            color: #5C4B8B;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        #contact a:hover {
+            color: #D6A3E1;
+        }
+
+    </style>
+</head>
 <body>
 
-    <!-- Header -->
+    <!-- Header Section -->
     <header>
-        <div class="container">
-            <h1>Your Name</h1>
-            <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+        <h1>Welcome to My Gamer Portfolio</h1>
+        <nav>
+            <a href="#about">About Me</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
 
     <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>Hi! I'm a passionate developer/designer. I specialize in web development, design, and creative projects. With years of experience and a love for learning, I always strive to create intuitive, responsive, and visually stunning digital experiences.</p>
-        </div>
-    </section>
+    <div class="portfolio-section" id="about">
+        <h2>About Me</h2>
+        <p>
+            I'm a passionate gamer and game designer with experience in creating immersive narratives and engaging gameplay. I specialize in game design, storytelling, and content creation. My focus is on building worlds that capture the imagination and draw players into unique experiences.
+        </p>
+    </div>
 
-    <!-- Projects Section -->
-    <section id="projects">
-        <div class="container">
-            <h2><i class="fas fa-star"></i> Projects</h2>
+    <!-- Portfolio Section -->
+    <div class="portfolio-section" id="projects">
+        <h2>My Projects</h2>
+        
+        <!-- Narrative Subsection -->
+        <div class="project-subsection" id="narrative">
+            <h3>Narrative Projects</h3>
+            <p>This section showcases my work involving storytelling, game design, and narrative mechanics.</p>
 
-            <!-- Marketing Section with Instagram Carousel -->
+            <!-- Narrative Project Details -->
             <details>
-                <summary><i class="fas fa-bullhorn"></i> Marketing</summary>
-                <div class="carousel-container">
-                    <h3>Check out our Instagram Marketing Campaigns</h3>
-                    <div class="carousel">
-                        <!-- Instagram Links as Slides -->
-                        <div>
-                            <a href="https://www.instagram.com/p/Cp7p4h7MSBv/" target="_blank">
-                                <img src="https://via.placeholder.com/400x300?text=Instagram+Post+1" alt="Instagram Post 1">
+                <summary>Game Story 1: Adventure in a fantasy world</summary>
+                <p>This narrative explores a high-fantasy adventure where players journey through magical lands, encountering mythical creatures and solving ancient mysteries.</p>
+            </details>
+
+            <details>
+                <summary>Game Story 2: Sci-fi RPG narrative</summary>
+                <p>A futuristic, science-fiction story involving space exploration, diplomacy, and intergalactic conflicts. Players make decisions that affect the fate of entire civilizations.</p>
+            </details>
+
+            <details>
+                <summary>Game Story 3: Horror survival writing</summary>
+                <p>This dark narrative immerses players in a post-apocalyptic world where they must survive against terrifying creatures and unravel a chilling mystery.</p>
+            </details>
+        </div>
+
+        <!-- Marketing Subsection with Instagram Carousel -->
+        <div class="project-subsection" id="marketing">
+            <h3>Marketing Projects</h3>
+            <p>This section highlights my work in marketing, including social media campaigns and visual content creation.</p>
+
+            <!-- Instagram Carousel -->
+            <div class="carousel-container">
+                <div class="carousel-item">
+                    <blockquote class="instagram-media instagram-embed" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DF_QlwrpTOY/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14">
+                        <div style="padding:16px;">
+                            <a href="https://www.instagram.com/p/DF_QlwrpTOY/?utm_source=ig_embed&amp;utm_campaign=loading" style="background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank">
+                                <!-- Instagram content -->
                             </a>
                         </div>
-                        <div>
-                            <a href="https://www.instagram.com/p/Cp7dFgHMGXj/" target="_blank">
-                                <img src="https://via.placeholder.com/400x300?text=Instagram+Post+2" alt="Instagram Post 2">
-                            </a>
-                        </div>
-                        <div>
-                            <a href="https://www.instagram.com/p/Cp6xwFqMTF1/" target="_blank">
-                                <img src="https://via.placeholder.com/400x300?text=Instagram+Post+3" alt="Instagram Post 3">
-                            </a>
-                        </div>
-                        <div>
-                            <a href="https://www.instagram.com/p/Cp6y0Upg9Uq/" target="_blank">
-                                <img src="https://via.placeholder.com/400x300?text=Instagram+Post+4" alt="Instagram Post 4">
-                            </a>
-                        </div>
-                    </div>
+                    </blockquote>
+                    <script async src="//www.instagram.com/embed.js"></script>
                 </div>
-            </details>
+                
+                <div class="carousel-item">
+                    <blockquote class="instagram-media instagram-embed" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DFqyl8qprJz/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14">
+                        <div style="padding:16px;">
+                            <a href="https://www.instagram.com/p/DFqyl8qprJz/?utm_source=ig_embed&amp;utm_campaign=loading" style="background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank">
+                                <!-- Instagram content -->
+                            </a>
+                        </div>
+                    </blockquote>
+                    <script async src="//www.instagram.com/embed.js"></script>
+                </div>
 
-            <!-- Narrative Design Section -->
-            <details>
-                <summary><i class="fas fa-scroll"></i> Narrative Design</summary>
-                <details>
-                    <summary><i class="fas fa-pen-fancy"></i> Narrative Project 1</summary>
-                    <p>Details about the project and its narrative structure.</p>
-                </details>
-                <details>
-                    <summary><i class="fas fa-feather-alt"></i> Narrative Project 2</summary>
-                    <p>Details about the project and its narrative structure.</p>
-                </details>
-            </details>
-
+                <div class="carousel-item">
+                    <blockquote class="instagram-media instagram-embed" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DHligshO4uQ/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14">
+                        <div style="padding:16px;">
+                            <a href="https://www.instagram.com/p/DHligshO4uQ/?utm_source=ig_embed&amp;utm_campaign=loading" style="background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank">
+                                <!-- Instagram content -->
+                            </a>
+                        </div>
+                    </blockquote>
+                    <script async src="//www.instagram.com/embed.js"></script>
+                </div>
+            </div>
         </div>
-    </section>
+    </div>
 
     <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <p>If you'd like to work together, collaborate, or just want to say hello, feel free to reach out!</p>
-            <ul>
-                <li>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></li>
-                <li>LinkedIn: <a href="https://www.linkedin.com/in/your-profile" target="_blank">LinkedIn Profile</a></li>
-            </ul>
-        </div>
-    </section>
+    <div class="portfolio-section" id="contact">
+        <h2>Contact</h2>
+        <p>If you'd like to connect or collaborate, feel free to reach out!</p>
+        <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/yourname" target="_blank">yourname</a></p>
+    </div>
 
-    <!-- Footer -->
+    <!-- Footer Section -->
     <footer>
-        <div class="container">
-            <p>&copy; 2025 Your Name</p>
-        </div>
+        <p>&copy; 2025 Your Name. All rights reserved.</p>
     </footer>
 
-    <!-- Slick Carousel JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-
-    <script>
-        $(document).ready(function(){
-            $('.carousel').slick({
-                infinite: true,
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                autoplay: true,
-                autoplaySpeed: 2000,
-                dots: true,
-            });
-        });
-    </script>
-
 </body>
-
 </html>

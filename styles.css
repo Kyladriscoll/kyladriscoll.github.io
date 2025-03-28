@@ -3,8 +3,8 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #121212; /* Dark background */
-    color: #F5F5F5; /* Light text */
+    background-color: #13141F; /* Dark background */
+    color: #FFFFFF; /* White text */
     line-height: 1.6;
 }
 
@@ -15,7 +15,7 @@ body {
 
 /* Header */
 header {
-    background-color: #5C4B8B; /* Purple tone */
+    background-color: #6C4F91; /* Purple tone */
     padding: 20px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
@@ -45,21 +45,21 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    color: #D6A3E1; /* Light purple */
+    color: #FF6F61; /* Soft Pink */
     text-decoration: underline;
 }
 
 /* About Section */
 #about {
     padding: 40px 0;
-    background-color: #1D1D1D; /* Darker section background */
+    background-color: #2A2A2A; /* Darker background */
 }
 
 #about h2 {
     text-align: center;
     font-size: 32px;
     margin-bottom: 10px;
-    color: #D6A3E1; /* Light purple */
+    color: #FF6F61; /* Soft Pink */
 }
 
 #about p {
@@ -77,13 +77,13 @@ header nav ul li a:hover {
     text-align: center;
     font-size: 32px;
     margin-bottom: 40px;
-    color: #D6A3E1; /* Light purple */
+    color: #FF6F61; /* Soft Pink */
 }
 
 details {
     margin-bottom: 30px;
     padding: 15px;
-    background-color: #2A2A2A; /* Darker section background */
+    background-color: #3A3A3A; /* Slightly lighter background */
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -96,7 +96,7 @@ details summary {
 }
 
 details summary:hover {
-    color: #D6A3E1; /* Light purple */
+    color: #FF6F61; /* Soft Pink */
 }
 
 details p {
@@ -134,13 +134,13 @@ details p {
 }
 
 .slick-dots li.slick-active button:before {
-    color: #D6A3E1; /* Light purple */
+    color: #FF6F61; /* Soft Pink */
 }
 
 /* Contact Section */
 #contact {
     padding: 40px 0;
-    background-color: #1D1D1D; /* Darker section background */
+    background-color: #2A2A2A; /* Darker background */
     text-align: center;
     color: #F5F5F5;
 }
@@ -166,7 +166,7 @@ details p {
 }
 
 #contact ul li a {
-    color: #D6A3E1; /* Light purple */
+    color: #FF6F61; /* Soft Pink */
     text-decoration: none;
 }
 
@@ -177,7 +177,7 @@ details p {
 /* Footer */
 footer {
     padding: 20px;
-    background-color: #121212; /* Dark background */
+    background-color: #13141F; /* Dark background */
     text-align: center;
 }
 
