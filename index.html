@@ -63,6 +63,9 @@
         #about p {
             font-size: 1.2rem;
             margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         #about .bio-container {
@@ -84,19 +87,19 @@
             text-align: left;
         }
 
-        #about .bio-container .resume-link {
-            text-decoration: none;
-            color: #D6A3E1;
+        #about .contact-info {
+            margin-top: 30px;
             font-size: 1.2rem;
-            margin-top: 20px;
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #444;
-            border-radius: 5px;
         }
 
-        #about .bio-container .resume-link:hover {
-            background-color: #5C4B8B;
+        #about .contact-info a {
+            color: #D6A3E1;
+            text-decoration: none;
+        }
+
+        #about .contact-info a:hover {
+            color: #fff;
+            text-decoration: underline;
         }
 
         /* Portfolio Section */
@@ -219,38 +222,33 @@
         </nav>
     </header>
 
- <!-- About Me Section -->
-<section id="about">
-    <h2>About Me</h2>
-    <p>Thanks for stopping by! My name is Kyla, and I am a passionate Narrative Designer!</p>
-    <p>In my free time, I am a mentor and alumni of FIRST. 
-    <p>At local FIRST LEGO League(FLL) and FIRST Robotics Competitions(FRC), you can often find me in the judge's room, providing feedback to young engineers.</p>
-    <div class="bio-container">
-        <!-- Bio Image -->
-        <img src="478821730_1794211681122386_8328149616478346293_n.jpg" alt="Your Bio Picture">
+    <!-- About Me Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Thanks for stopping by! My name is Kyla, and I am a passionate Narrative Designer. In my free time, I mentor and serve as an alumni of FIRST, where you can often find me in the judge's room at local FIRST LEGO League (FLL) and FIRST Robotics Competitions (FRC), providing valuable feedback to young engineers.</p>
+        <div class="bio-container">
+            <!-- Bio Image -->
+            <img src="478821730_1794211681122386_8328149616478346293_n.jpg" alt="Your Bio Picture">
 
-        <!-- About My Journey Text -->
-        <div class="bio-text">
-            <p><strong>About my journey:</strong> Ever since I was a young girl, I have enjoyed gaming. Growing up, my family would play tabletop games with our meals, teaching us kids critical thinking skills from an early age. However, my passion for gaming did not stop there. As I grew older, my father and I would create board games together, creating unique game mechanics based off of our most beloved games.</p>
+            <!-- About My Journey Text -->
+            <div class="bio-text">
+                <p><strong>About my journey:</strong> Ever since I was a young girl, I have enjoyed gaming. Growing up, my family would play tabletop games with our meals, teaching us kids critical thinking skills from an early age. However, my passion for gaming did not stop there. As I grew older, my father and I would create board games together, creating unique game mechanics based off of our most beloved games.</p>
+            </div>
         </div>
-    </div>
 
-    <!-- Contact Information Section -->
-    <div class="contact-info">
-        <p>If you would like to get in touch, feel free to reach out via email or connect with me on LinkedIn!</p>
-        <p><strong>Email:</strong> kylacdriscoll@gmail.com</p>
-        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/kyla" target="_blank" style="color: #D6A3E1;">linkedin.com/in/kyla</a></p>
-        <a href="path_to_resume.pdf" class="resume-link">Download Resume</a>
-
-    </div>
-</section>
-
-</section>
+        <!-- Contact Information Section -->
+        <div class="contact-info">
+            <p>If you would like to get in touch, feel free to reach out via email or connect with me on LinkedIn!</p>
+            <p><strong>Email:</strong> kylacdriscoll@gmail.com</p>
+            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/kyla" target="_blank" style="color: #D6A3E1;">linkedin.com/in/kyla</a></p>
+            <a href="path_to_resume.pdf" class="resume-link">Download Resume</a>
+        </div>
+    </section>
 
     <!-- Portfolio Section -->
     <div class="portfolio-section" id="projects">
         <h2>My Projects</h2>
-        
+
         <!-- Narrative Subsection -->
         <div class="project-subsection" id="narrative">
             <h3>Narrative Projects</h3>
