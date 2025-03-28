@@ -4,8 +4,6 @@ body {
     background-color: #1a1a1a;
     color: #f0f0f0;
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
 }
 
 .container {
@@ -83,7 +81,7 @@ details:hover {
     box-shadow: 0 0 12px rgba(185, 108, 199, 0.5);
 }
 
-summary {
+details summary {
     font-size: 1.4rem;
     color: #c38bd3;
     font-weight: 600;
@@ -93,7 +91,12 @@ summary {
     align-items: center;
 }
 
-summary::after {
+details summary i {
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
+
+details summary::after {
     content: "▶";
     transition: transform 0.3s ease;
     color: #c38bd3;
@@ -147,58 +150,4 @@ footer {
 
 footer p {
     font-size: 1rem;
-}
-
-/* ================= RESPONSIVE DESIGN ================= */
-@media only screen and (max-width: 768px) {
-    header h1 {
-        font-size: 2.5rem;
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    section h2 {
-        font-size: 2rem;
-    }
-
-    section p {
-        font-size: 1rem;
-    }
-
-    details p {
-        font-size: 0.9rem;
-    }
-
-    footer p {
-        font-size: 0.9rem;
-    }
-}
-
-@media only screen and (max-width: 480px) {
-    header h1 {
-        font-size: 2rem;
-    }
-
-    nav a {
-        font-size: 1rem;
-    }
-
-    section h2 {
-        font-size: 1.8rem;
-    }
-
-    section p {
-        font-size: 0.9rem;
-    }
-
-    details p {
-        font-size: 0.8rem;
-    }
-
-    footer p {
-        font-size: 0.8rem;
-    }
 }
