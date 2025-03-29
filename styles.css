@@ -236,3 +236,15 @@ header nav a:hover {
         padding: 0 15px;
     }
 }
+
+.project-detail-text a {
+    color: #D6A3E1; /* light purple */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.project-detail-text a:hover {
+    color: #A08C8D; /* soft muted color on hover */
+    text-decoration: underline;
+}
