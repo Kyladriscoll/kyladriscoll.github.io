@@ -17,6 +17,7 @@
             line-height: 1.6;
             background-color: #121212;
             color: #F5F5F5;
+            scroll-behavior: smooth;
         }
 
         /* Header Section */
@@ -36,27 +37,50 @@
             margin-bottom: 10px;
         }
 
+        header nav {
+            margin: 10px 0;
+        }
+
         header nav a {
             color: #fff;
-            margin: 0 15px;
+            margin: 0 20px;
             text-decoration: none;
             font-size: 1.1rem;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
         }
 
         header nav a:hover {
             color: #D6A3E1;
         }
 
-        /* About Me Section with Ombre Background */
+        .download-link {
+            display: inline-block;
+            padding: 8px 15px;
+            background-color: #A08C8D;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            margin-top: 10px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .download-link:hover {
+            background-color: #8B7F7D;
+            color: #fff;
+        }
+
+        /* About Me Section */
         #about {
-            padding: 50px 20px;
+            padding: 60px 20px;
             text-align: center;
             background: linear-gradient(180deg, #5C4B8B, #121212);
             color: #F5F5F5;
         }
 
         #about h2 {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             margin-bottom: 20px;
         }
 
@@ -72,12 +96,12 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 30px;
+            gap: 20px;
         }
 
         #about .bio-container img {
-            width: 200px;  /* Slightly larger bio picture */
-            height: auto;
+            width: 180px;
+            height: 180px;
             object-fit: cover;
             border-radius: 10px;
             margin-right: 20px;
@@ -118,132 +142,126 @@
             color: #D6A3E1;
         }
 
-        /* Project Subsections */
-        .project-subsection {
+        /* Project Card Layout */
+        .project-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
             margin-top: 30px;
-            padding: 30px;
-            background-color: #333;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
         }
 
-        .project-subsection h3 {
-            font-size: 2rem;
-            margin-bottom: 15px;
+        .project-card {
+            background-color: #333;
+            color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .project-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
             color: #D6A3E1;
         }
 
-        /* Narrative Details */
-        details {
-            margin-bottom: 20px;
-            padding: 20px;
-            background-color: #444;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
+        .project-card p {
+            font-size: 1rem;
+            margin-bottom: 15px;
         }
 
-        details summary {
-            font-size: 1.5rem;
+        .project-card .project-link {
+            display: inline-block;
+            padding: 8px 15px;
+            background-color: #A08C8D;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .project-card .project-link:hover {
+            background-color: #8B7F7D;
+        }
+
+        /* Project Details Section */
+        .project-details {
+            padding: 50px 20px;
+            background-color: #2A2A2A;
             color: #F5F5F5;
+            text-align: center;
         }
 
-        details:hover {
-            background-color: #5C4B8B;
+        .project-details h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #D6A3E1;
         }
 
-        /* Instagram Carousel */
-        .carousel-container {
-            display: flex;
-            overflow-x: auto;
-            gap: 20px;
-            padding: 20px;
-            justify-content: center;
-            scroll-snap-type: x mandatory;
-            flex-wrap: nowrap;
-            box-sizing: border-box;
-        }
-
-        .carousel-item {
-            flex: 0 0 auto;
-            scroll-snap-align: start;
-            width: 300px;
-            height: 300px;
-            border-radius: 10px;
-            overflow: hidden;
-            background-color: #444;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-        }
-
-        /* Instagram Embeds */
-        .instagram-embed {
-            width: 100%;
-            height: 100%;
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain;
-        }
-
-        /* Fix for Instagram posts inside carousel */
-        .carousel-item blockquote {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-        }
-
-        .carousel-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        .project-details p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
         }
 
         /* Footer Section */
         footer {
+            background-color: #121212;
             text-align: center;
-            background: #121212;
-            color: #fff;
+            color: #F5F5F5;
             padding: 20px;
             margin-top: 50px;
         }
 
-        /* Styling for Project Dropdown */
-        .project-dropdown {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            justify-content: center;  /* Centered dropdown */
-            text-align: left;
+        footer p {
+            font-size: 1rem;
         }
 
-        .project-dropdown img {
-            width: 250px;  /* Larger image for dropdown */
-            height: auto;
-            border-radius: 10px;
-            object-fit: cover;
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .portfolio-section h2 {
+                font-size: 2rem;
+            }
+
+            .project-cards {
+                grid-template-columns: 1fr 1fr;
+            }
         }
 
-        .project-dropdown .project-text {
-            max-width: 600px;
-            text-align: left;
-        }
+        @media (max-width: 480px) {
+            .project-cards {
+                grid-template-columns: 1fr;
+            }
 
-        .download-link {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 10px 20px;
-            background-color: #5C4B8B;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 1.1rem;
-        }
+            header nav a {
+                font-size: 1rem;
+                margin: 0 10px;
+            }
 
-        .download-link:hover {
-            background-color: #D6A3E1;
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .bio-container {
+                flex-direction: column;
+            }
+
+            .bio-container img {
+                margin-bottom: 20px;
+            }
         }
     </style>
 </head>
@@ -256,78 +274,116 @@
             <a href="#about">About Me</a>
             <a href="#projects">Projects</a>
         </nav>
+        <a href="path_to_resume.pdf" class="download-link">Download Resume</a>
     </header>
 
     <!-- About Me Section -->
     <section id="about">
         <h2>About Me</h2>
-        <p>Thanks for stopping by! My name is Kyla, and I am a passionate Narrative Designer. In my free time, I mentor and serve as an alumni of FIRST, where you can often find me in the judge's room at local FIRST LEGO League (FLL) and FIRST Robotics Competitions (FRC), providing valuable feedback to young engineers.</p>
+        <p>Welcome to my portfolio! I am Kyla, a Narrative Designer passionate about storytelling in games and media. My journey started at a young age, where I engaged in tabletop games and later ventured into game mechanics development. When I'm not designing narratives, I love mentoring future engineers through FIRST Robotics, providing mentorship, and serving as a competition judge.</p>
         <div class="bio-container">
-            <!-- Bio Image -->
             <img src="478821730_1794211681122386_8328149616478346293_n.jpg" alt="Your Bio Picture">
-
-            <!-- About My Journey Text -->
             <div class="bio-text">
-                <p><strong>About my journey:</strong> Ever since I was a young girl, I have enjoyed gaming. Growing up, my family would play tabletop games with our meals, teaching us kids critical thinking skills from an early age. However, my passion for gaming did not stop there. As I grew older, my father and I would create board games together, creating unique game mechanics based off of our most beloved games.</p>
+                <p><strong>My Journey:</strong> From my early days designing board games with my father, to creating worlds through narrative design, I've always been driven by my love of gaming and storytelling. I now focus on bringing immersive and engaging narratives to life in both interactive and non-interactive formats.</p>
             </div>
         </div>
 
-        <!-- Contact Information Section -->
+        <!-- Contact Information -->
         <div class="contact-info">
-            <p>If you would like to get in touch, feel free to reach out via email or connect with me on LinkedIn!</p>
+            <p>Feel free to reach out to me via email or connect with me on LinkedIn!</p>
             <p><strong>Email:</strong> kylacdriscoll@gmail.com</p>
-            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/kyla" target="_blank" style="color: #D6A3E1;">linkedin.com/in/kyla</a></p>
-            <a href="path_to_resume.pdf" class="resume-link">Download Resume</a>
+            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/kyla" target="_blank">linkedin.com/in/kyla</a></p>
         </div>
     </section>
 
     <!-- Portfolio Section -->
-    <div class="portfolio-section" id="projects">
+    <section class="portfolio-section" id="projects">
         <h2>My Projects</h2>
+        <div class="project-cards">
+            <div class="project-card">
+                <img src="TerrorBird_noBackground.png" alt="Project 1">
+                <h3>Echoes of the Salt Flats</h3>
+                <p>A tabletop roleplaying game created to learn how worldbuilding surfaces across different forms of interactive media</p>
+                <a href="#project1" class="project-link">Learn More</a>
+            </div>
 
-        <!-- Narrative Subsection -->
-        <div class="project-subsection" id="narrative">
-            <h3>Narrative Projects</h3>
-            <p>This section showcases my work involving storytelling, game design, and narrative mechanics.</p>
+            <div class="project-card">
+                <img src="https://via.placeholder.com/400x200" alt="Project 2">
+                <h3>Exile in the Mechnoir Desert</h3>
+                <p>An action RPG blending steampunk with ancient mythology. Fight, explore, and uncover secrets hidden in a vast desert.</p>
+                <a href="#project2" class="project-link">Learn More</a>
+            </div>
 
-            <!-- Echoes of the Salt Flats Project -->
-            <details>
-                <summary>Echoes of the Salt Flats</summary>
-                <p>Description of the game concept...</p>
-                <a href="#" class="download-link">Download Project</a>
-            </details>
-            <!-- Project Dropdown for Echoes of the Salt Flats -->
-             
-<div class="project-dropdown">
-    <img src="path/to/your/image.jpg" alt="Echoes of the Salt Flats" class="project-image">
-    <div class="project-text">
-        <h4>Echoes of the Salt Flats</h4>
-        <p>This is the description or caption for Echoes of the Salt Flats. It provides context about the project and its significance in your portfolio.</p>
-    </div>
-</div>
-
-
-            <!-- Exile in the Mechnoir Desert Project -->
-            <details>
-                <summary>Exile in the Mechnoir Desert</summary>
-                <p>Description of the game concept...</p>
-                <a href="#" class="download-link">Download Project</a>
-            </details>
+            <div class="project-card">
+                <img src="https://via.placeholder.com/400x200" alt="Project 3">
+                <h3>Celestial Guardians</h3>
+                <p>A strategy-based game where players protect the elements through powerful celestial beings. Will you restore balance?</p>
+                <a href="#project3" class="project-link">Learn More</a>
+            </div>
         </div>
+    </section>
 
-    <!-- Marketing Projects Section -->
-<div class="project-subsection">
-    <h3>Marketing Projects</h3>
-    <p><a href="https://www.instagram.com/studioberto/" target="_blank">Studio Berto on Instagram</a></p>
+<!-- Project Details Section -->
+<section id="project1" class="project-details">
+    <h3>Echoes of the Salt Flats</h3>
+    <div class="project-detail-container">
+        <div class="project-detail-image">
+            <img src="TerrorBird_noBackground.png" width="250" height="250">
+        </div>
+        <div class="project-detail-text">
+            <p>A deep exploration into survival and environmental change set in a harsh desert wasteland. Players uncover ancient mysteries and navigate harsh conditions to survive.</p>
+            <p><strong>Key Features:</strong></p>
+            <ul>
+                <li>Open-world exploration</li>
+                <li>Environmental storytelling</li>
+                <li>Character development</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+<section id="project2" class="project-details">
+    <h3>Exile in the Mechnoir Desert</h3>
+    <div class="project-detail-container">
+        <div class="project-detail-image">
+            <img src="https://via.placeholder.com/600x300" alt="Exile in the Mechnoir Desert">
+        </div>
+        <div class="project-detail-text">
+            <p>An action RPG where players face challenges using a blend of ancient mythology and futuristic steampunk technology. Each decision affects the fate of the desert.</p>
+            <p><strong>Key Features:</strong></p>
+            <ul>
+                <li>Action-based combat system</li>
+                <li>Branching storylines</li>
+                <li>Mythological lore integration</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section id="project3" class="project-details">
+    <h3>Celestial Guardians</h3>
+    <div class="project-detail-container">
+        <div class="project-detail-image">
+            <img src="https://via.placeholder.com/600x300" alt="Celestial Guardians">
+        </div>
+        <div class="project-detail-text">
+            <p>A strategy game set in a world where celestial beings must defend their elements. Players must choose wisely to restore balance to the world before it's too late.</p>
+            <p><strong>Key Features:</strong></p>
+            <ul>
+                <li>Turn-based tactical gameplay</li>
+                <li>Elemental guardians with unique abilities</li>
+                <li>Strategic resource management</li>
+            </ul>
+        </div>
+    </div>
+</section>
 
 
     <!-- Footer Section -->
     <footer>
-        <p>&copy; 2025 Kyla Driscoll | All rights reserved</p>
+        <p>&copy; 2025 Kyla Driscoll | All Rights Reserved</p>
     </footer>
-
-    <!-- Instagram Embed Scripts -->
-    <script async src="//www.instagram.com/embed.js"></script>
 
 </body>
 </html>
