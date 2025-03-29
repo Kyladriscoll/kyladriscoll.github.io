@@ -26,3 +26,86 @@
         height: 120px; /* Make the height equal to the width for a square */
     }
 }
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Layout */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Image Styling */
+img {
+    max-width: 100%; /* Makes image responsive to container size */
+    height: auto;    /* Keeps the aspect ratio intact */
+}
+
+/* Specific Image Resizing */
+.small-image {
+    width: 200px;  /* Fixed width */
+    height: 200px; /* Fixed height to make it square */
+}
+
+/* Responsive Image Styling */
+@media (max-width: 1200px) {  /* Devices with screen width <= 1200px (large desktops and laptops) */
+    .small-image {
+        width: 250px;  /* Resize for larger laptops and desktops */
+        height: 250px; /* Keep square shape */
+    }
+}
+
+@media (max-width: 992px) {  /* Devices with screen width <= 992px (tablets in landscape mode) */
+    .small-image {
+        width: 200px;  /* Resize for tablets in landscape mode */
+        height: 200px; /* Keep square shape */
+    }
+}
+
+@media (max-width: 768px) {  /* Devices with screen width <= 768px (tablets and small laptops) */
+    .small-image {
+        width: 150px;  /* Resize for tablets */
+        height: 150px; /* Keep square shape */
+    }
+}
+
+@media (max-width: 480px) {  /* Devices with screen width <= 480px (phones in portrait mode) */
+    .small-image {
+        width: 120px;  /* Resize for mobile */
+        height: 120px; /* Keep square shape */
+    }
+}
+
+/* Example: Image in Container */
+.img-container {
+    text-align: center;
+    margin: 20px;
+}
+
+.img-container img {
+    width: 100%; /* Make the image take up the full width of its container */
+    max-width: 600px; /* Limit the maximum width */
+    height: auto;    /* Maintain the aspect ratio */
+}
+
+/* Larger Desktop and High Resolution Devices */
+@media (min-width: 1600px) {  /* Devices with screen width >= 1600px */
+    .small-image {
+        width: 300px;  /* Resize for larger monitors and displays */
+        height: 300px; /* Keep square shape */
+    }
+}
+
+/* Additional Customizations for Specific Devices */
+@media (min-width: 1400px) and (max-width: 1600px) {  /* Devices with width between 1400px and 1600px */
+    .small-image {
+        width: 280px;  /* Resize for mid-sized large monitors */
+        height: 280px; /* Keep square shape */
+    }
+}
