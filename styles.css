@@ -109,3 +109,130 @@ img {
         height: 280px; /* Keep square shape */
     }
 }
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and font setup */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #121212;
+    color: #F5F5F5;
+    scroll-behavior: smooth;
+}
+
+/* Header Section */
+header {
+    background: #5C4B8B;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header nav {
+    margin: 10px 0;
+}
+
+header nav a {
+    color: #fff;
+    margin: 0 20px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: #D6A3E1;
+}
+
+/* Project Details Section */
+.project-details {
+    padding: 50px 20px;
+    background-color: #2A2A2A;
+    color: #F5F5F5;
+    text-align: center;
+}
+
+.project-details h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #D6A3E1;
+}
+
+.project-detail-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.project-detail-image {
+    width: 300px; /* Fixed size for image */
+    height: 250px; /* Fixed height for image */
+    border: 5px solid #D6A3E1; /* Add a border around the image */
+    border-radius: 10px; /* Slightly round the corners of the border */
+    overflow: hidden; /* Ensures the image stays within the border */
+}
+
+.project-detail-image img {
+    width: 100%; /* Make the image take up the full width of its container */
+    height: 100%; /* Make the image take up the full height of its container */
+    object-fit: cover; /* Ensures the image covers the container without distortion */
+}
+
+.project-detail-text {
+    max-width: 800px;
+    text-align: left;
+}
+
+.project-detail-text ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.project-detail-text ul li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .project-detail-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-detail-image {
+        width: 250px; /* Reduce size for tablets */
+        height: 200px; /* Reduce height */
+    }
+
+    .project-detail-text {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-detail-image {
+        width: 200px; /* Further reduce size for mobile */
+        height: 180px; /* Adjust height */
+    }
+
+    .project-detail-text {
+        padding: 0 15px;
+    }
+}
