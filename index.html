@@ -329,7 +329,7 @@
     <h3 style="color: #cba6f7; font-size: 1.8rem; margin-bottom: 1rem;">Echoes of the Salt Flats</h3>
     <div class="project-detail-container" style="display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap;">
         <div class="project-detail-image" style="flex: 1; min-width: 250px;">
-            <img src="TerrorBird_noBackground.png" alt="Echoes of the Salt Flats" width="500" height="400" style="border-radius: 0.75rem;">
+            <img src="TerrorBird_noBackground.png" alt="Echoes of the Salt Flats" width="500" height="400" style="border-radius: 0.75rem; width: 100%; height: auto;">
         </div>
         <div class="project-detail-text" style="flex: 2; color: #ddd; font-size: 1rem;">
             <p><strong>Echoes of the Salt Flats</strong> is a Tabletop RPG featuring a unique crafting mechanic, designed to explore how worldbuilding surfaces in different forms of interactive media.</p>
@@ -355,7 +355,7 @@
     <h3 style="color: #cba6f7; font-size: 1.8rem; margin-bottom: 1rem;">Plates of Power</h3>
     <div class="project-detail-container" style="display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap;">
         <div class="project-detail-image" style="flex: 1; min-width: 250px;">
-            <img src="Mentor_Sticker01.png" alt="Plates of Power" width="300" height="250" style="border-radius: 0.75rem;">
+            <img src="Mentor_Sticker01.png" alt="Plates of Power" width="300" height="250" style="border-radius: 0.75rem; width: 100%; height: auto;">
         </div>
         <div class="project-detail-text" style="flex: 2; color: #ddd; font-size: 1rem;">
             <p><strong>Plates of Power</strong> is a rogue-like game inspired by Latino culture, emphasizing power, failure, and the importance of community. Returning home from college, Ale Zardoya hears of her sister's disappearance and must embrace the role of Champion as she embarks on a mission to find her.</p>
@@ -390,6 +390,48 @@
     </div>
 </section>
 
+<!-- Media Queries for Responsiveness -->
+<style>
+    @media screen and (max-width: 768px) {
+        .project-detail-container {
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .project-detail-image {
+            flex: 1;
+            min-width: 100%;
+        }
+
+        .project-detail-text {
+            flex: 1;
+            min-width: 100%;
+            font-size: 1rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+        }
+
+        hr {
+            width: 90%;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        h3 {
+            font-size: 1.2rem;
+        }
+
+        .project-detail-text {
+            font-size: 0.9rem;
+        }
+
+        hr {
+            width: 100%;
+        }
+    }
+</style>
 
 
     <!-- Footer Section -->
