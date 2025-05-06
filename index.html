@@ -1,620 +1,403 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kyla Driscoll Portfolio</title>
-    <style>
-        /* General Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kyla Driscoll Portfolio</title>
+  <style>
+    /* ─── Reset & Base ─── */
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: Arial, sans-serif; line-height:1.6; background:#121212; color:#F5F5F5; scroll-behavior:smooth; }
 
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            background-color: #121212;
-            color: #F5F5F5;
-            scroll-behavior: smooth;
-        }
+    /* ─── Header & Desktop Nav ─── */
+    header {
+      background:#5C4B8B; position:sticky; top:0; z-index:1000;
+      box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    }
+    .header-container {
+      max-width:1200px; margin:auto; padding:20px;
+      display:flex; align-items:center; justify-content:space-between;
+    }
+    header h1 { color:#fff; font-size:2.5rem; }
+    nav.navbar {
+      display:flex; align-items:center; gap:20px;
+    }
+    nav.navbar a, .dropbtn {
+      color:#fff; text-decoration:none; font-size:1.1rem;
+      text-transform:uppercase; background:none; border:none;
+      cursor:pointer; padding:0; transition:color .3s;
+    }
+    nav.navbar a:hover, .dropbtn:hover { color:#D6A3E1; }
 
-        /* Header Section */
-        header {
-            background: #5C4B8B;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
+    /* ─── Projects Dropdown ─── */
+    .dropdown { position:relative; }
+    .dropdown-content {
+      display:none; position:absolute; top:100%; left:0;
+      background:#5C4B8B; min-width:200px;
+      box-shadow:0 8px 16px rgba(0,0,0,0.2); z-index:1001;
+    }
+    .dropdown-content a {
+      display:block; padding:12px 16px; color:#fff;
+      text-decoration:none; transition:background .3s;
+    }
+    .dropdown-content a:hover { background:#8B7F7D; }
+    .dropdown:hover .dropdown-content { display:block; }
+    .dropbtn::after {
+      content:""; margin-left:5px; transition:content .2s;
+    }
+    .dropdown:hover .dropbtn::after { content:" ▾"; }
 
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
+    /* ─── Download Button ─── */
+    .download-link {
+      background:#A08C8D; padding:8px 15px; color:#fff;
+      border-radius:5px; transition:background .3s;
+    }
+    .download-link:hover { background:#8B7F7D; }
 
-        header nav {
-            margin: 10px 0;
-        }
+    /* ─── Hamburger & Mobile Menu ─── */
+    .hamburger {
+      display:none; flex-direction:column; gap:5px;
+      cursor:pointer; width:25px;
+    }
+    .hamburger span {
+      height:3px; background:#fff; border-radius:2px;
+      transition:transform .3s, opacity .3s;
+    }
+    .mobile-menu {
+      display:none; flex-direction:column; background:#5C4B8B;
+      position:absolute; top:100%; left:0; width:100%;
+      text-align:center; z-index:999;
+    }
+    .mobile-menu a {
+      padding:12px; color:#fff; text-decoration:none;
+      border-top:1px solid #8B7F7D; transition:background .3s;
+    }
+    .mobile-menu a:hover { background:#8B7F7D; }
 
-        header nav a {
-            color: #fff;
-            margin: 0 20px;
-            text-decoration: none;
-            font-size: 1.1rem;
-            text-transform: uppercase;
-            transition: color 0.3s ease;
-        }
+    /* ─── About Me ─── */
+    #about {
+      padding:60px 20px; text-align:center;
+      background:linear-gradient(180deg,#5C4B8B,#121212);
+    }
+    #about h2 { font-size:2.8rem; margin-bottom:20px; }
+    #about p {
+      font-size:1.2rem; margin:0 auto 30px; max-width:800px;
+    }
+    .bio-container {
+      display:flex; flex-wrap:wrap; justify-content:center;
+      align-items:center; gap:20px;
+    }
+    .bio-container img {
+      width:180px; height:180px; object-fit:cover;
+      border-radius:10px;
+    }
+    .bio-text { max-width:600px; text-align:left; color:#fff; }
+    .contact-info a { color:#D6A3E1; text-decoration:none; }
+    .contact-info a:hover { text-decoration:underline; }
 
-        header nav a:hover {
-            color: #D6A3E1;
-        }
+    /* ─── Portfolio & Cards ─── */
+    .portfolio-section {
+      padding:50px 20px; text-align:center;
+      background:#2A2A2A; box-shadow:0 4px 10px rgba(0,0,0,0.1);
+      margin-top:50px;
+    }
+    .portfolio-section h2 { color:#D6A3E1; font-size:2.5rem; margin-bottom:30px; }
+    .project-cards {
+      display:grid; gap:30px;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    }
+    .project-card {
+      background:#333; color:#fff; border-radius:10px;
+      padding:20px; box-shadow:0 4px 10px rgba(0,0,0,0.3);
+      transition:transform .3s, box-shadow .3s;
+    }
+    .project-card:hover {
+      transform:translateY(-10px);
+      box-shadow:0 8px 20px rgba(0,0,0,0.5);
+    }
+    .project-card img {
+      width:100%; height:200px; object-fit:cover;
+      border-radius:10px; margin-bottom:20px;
+    }
+    .project-link {
+      background:#A08C8D; padding:8px 15px; border-radius:5px;
+      display:inline-block; color:#fff; text-decoration:none;
+      transition:background .3s;
+    }
+    .project-link:hover { background:#8B7F7D; }
 
-        .download-link {
-            display: inline-block;
-            padding: 8px 15px;
-            background-color: #A08C8D;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 1rem;
-            margin-top: 10px;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
+    /* ─── Project Details ─── */
+    .project-details {
+      padding:50px 20px; background:#2A2A2A; color:#F5F5F5;
+      text-align:center; margin-bottom:2rem;
+    }
+    .project-detail-container {
+      display:flex; flex-wrap:wrap; gap:20px;
+      justify-content:center; align-items:center;
+    }
+    .project-detail-image {
+      width:200px; height:200px; border:5px solid #D6A3E1;
+      border-radius:10px; overflow:hidden;
+    }
+    .project-detail-image img {
+      width:100%; height:100%; object-fit:cover;
+    }
+    .project-detail-text { max-width:800px; text-align:left; }
+    .project-detail-text a { color:#D6A3E1; font-weight:bold; }
+    .project-detail-text a:hover { color:#A08C8D; text-decoration:underline; }
 
-        .download-link:hover {
-            background-color: #8B7F7D;
-            color: #fff;
-        }
+    /* ─── Footer ─── */
+    footer {
+      background:#121212; text-align:center; padding:20px;
+      margin-top:50px; color:#F5F5F5;
+    }
 
-        /* Hamburger Icon */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 5px;
-  margin-top: 10px;
-}
-
-.hamburger span {
-  height: 3px;
-  width: 25px;
-  background: #fff;
-  border-radius: 2px;
-  transition: all 0.3s ease;
-}
-
-/* Mobile Menu */
-.mobile-menu {
-  display: none;
-  flex-direction: column;
-  background-color: #5C4B8B;
-  position: absolute;
-  top: 70px;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  z-index: 999;
-}
-
-.mobile-menu a {
-  padding: 15px;
-  color: #fff;
-  text-decoration: none;
-  border-top: 1px solid #8B7F7D;
-}
-
-.mobile-menu a:hover {
-  background-color: #8B7F7D;
-}
-
-@media (max-width: 768px) {
-  nav {
-    display: none;
-  }
-
-  .hamburger {
-    display: flex;
-  }
-
-  .download-link {
-    display: inline-block;
-    margin-top: 10px;
-    width: 100%;
-    text-align: center;
-  }
-}
-
-        /* About Me Section */
-        #about {
-            padding: 60px 20px;
-            text-align: center;
-            background: linear-gradient(180deg, #5C4B8B, #121212);
-            color: #F5F5F5;
-        }
-
-        #about h2 {
-            font-size: 2.8rem;
-            margin-bottom: 20px;
-        }
-
-        #about p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        #about .bio-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
-        }
-
-        #about .bio-container img {
-            width: 180px;
-            height: 180px;
-            object-fit: cover;
-            border-radius: 10px;
-            margin-right: 20px;
-        }
-
-        #about .bio-container .bio-text {
-            max-width: 600px;
-            text-align: left;
-        }
-
-        #about .contact-info {
-            margin-top: 30px;
-            font-size: 1.2rem;
-        }
-
-        #about .contact-info a {
-            color: #D6A3E1;
-            text-decoration: none;
-        }
-
-        #about .contact-info a:hover {
-            color: #fff;
-            text-decoration: underline;
-        }
-
-        /* Portfolio Section */
-        .portfolio-section {
-            padding: 50px 20px;
-            text-align: center;
-            background-color: #2A2A2A;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            margin-top: 50px;
-        }
-
-        .portfolio-section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 30px;
-            color: #D6A3E1;
-        }
-
-        /* Project Card Layout */
-        .project-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 30px;
-        }
-
-        .project-card {
-            background-color: #333;
-            color: #fff;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
-        }
-
-        .project-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 10px;
-            margin-bottom: 20px;
-        }
-
-        .project-card h3 {
-            font-size: 1.8rem;
-            margin-bottom: 10px;
-            color: #D6A3E1;
-        }
-
-        .project-card p {
-            font-size: 1rem;
-            margin-bottom: 15px;
-        }
-
-        .project-card .project-link {
-            display: inline-block;
-            padding: 8px 15px;
-            background-color: #A08C8D;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 1rem;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-
-        .project-card .project-link:hover {
-            background-color: #8B7F7D;
-        }
-
-        /* Project Details Section */
-        .project-details {
-            padding: 50px 20px;
-            background-color: #2A2A2A;
-            color: #F5F5F5;
-            text-align: center;
-        }
-
-        .project-details h3 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            color: #D6A3E1;
-        }
-
-        .project-details p {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-        }
-
-        /* Footer Section */
-        footer {
-            background-color: #121212;
-            text-align: center;
-            color: #F5F5F5;
-            padding: 20px;
-            margin-top: 50px;
-        }
-
-        footer p {
-            font-size: 1rem;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .portfolio-section h2 {
-                font-size: 2rem;
-            }
-
-            .project-cards {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .project-cards {
-                grid-template-columns: 1fr;
-            }
-
-            header nav a {
-                font-size: 1rem;
-                margin: 0 10px;
-            }
-
-            header h1 {
-                font-size: 2rem;
-            }
-
-            .bio-container {
-                flex-direction: column;
-            }
-
-            .bio-container img {
-                margin-bottom: 20px;
-            }
-        }
-    </style>
+    /* ─── Responsive ─── */
+    @media(max-width:768px) {
+      nav.navbar { display:none; }
+      .hamburger { display:flex; }
+      .mobile-menu.active { display:flex; }
+      .project-cards { grid-template-columns:1fr 1fr; }
+    }
+    @media(max-width:480px) {
+      .project-cards { grid-template-columns:1fr; }
+      header h1 { font-size:2rem; }
+    }
+  </style>
 </head>
 <body>
 
-    
-    <header>
-        <div class="header-container">
-          <h1>Kyla Driscoll</h1>
-      
-          <!-- Desktop Navigation -->
-          <nav class="navbar">
-            <a href="#about">About Me</a>
-            <a href="#projects">Projects</a>
-            <a href="K.Driscoll_Resume.pdf" class="download-link">Download Resume</a>
-          </nav>
-      
-          <!-- Hamburger Icon -->
-          <div class="hamburger" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
+  <header>
+    <div class="header-container">
+      <h1>Kyla Driscoll</h1>
+      <nav class="navbar">
+        <a href="#about">About Me</a>
+        <div class="dropdown">
+          <button class="dropbtn">Projects</button>
+          <div class="dropdown-content">
+            <a href="#project1">Echoes of the Salt Flats</a>
+            <a href="#project2">Plates of Power</a>
+            <a href="#project3">Craven</a>
+            <a href="#project4">IQP: Seeking Darkness in Acadia</a>
+            <a href="#project5">Lyre’s Galaxy</a>
           </div>
         </div>
-      
-        <!-- Mobile Menu -->
-        <div class="mobile-menu" id="mobileMenu">
-          <a href="#about" onclick="toggleMenu()">About Me</a>
-          <a href="#projects" onclick="toggleMenu()">Projects</a>
-          <a href="K.Driscoll_Resume.pdf" onclick="toggleMenu()">Download Resume</a>
-        </div>
-      </header>
+        <a href="K.Driscoll_Resume.pdf" class="download-link">Download Resume</a>
+      </nav>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    <nav class="mobile-menu" id="mobileMenu">
+      <a href="#about" onclick="toggleMenu()">About Me</a>
+      <a href="#projects" onclick="toggleMenu()">Projects</a>
+      <a href="K.Driscoll_Resume.pdf" onclick="toggleMenu()">Download Resume</a>
+    </nav>
+  </header>
 
-    <!-- About Me Section -->
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Hello, thanks for stopping by! My name is Kyla, a Narrative Designer from Pittston, Maine passionate about storytelling in 
-            interactive media. When I'm not designing narratives, I love mentoring future engineers through FIRST 
-            Robotics.
-        <div class="bio-container">
-            <img src="478821730_1794211681122386_8328149616478346293_n.jpg" alt="Bio Picture">
-            <div class="bio-text">
-                <p><strong>My Journey:</strong> From my early days designing board games with my father, to creating worlds through narrative design, I've always been driven by my love of gaming and storytelling. I now focus on bringing immersive and engaging narratives to life in interactive media.
-            </div>
-        </div>
+  <!-- About Me Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hello, thanks for stopping by! My name is Kyla, a Narrative Designer from Pittston, Maine passionate about storytelling in interactive media. When I'm not designing narratives, I love mentoring future engineers through FIRST Robotics.</p>
+    <div class="bio-container">
+      <img src="478821730_1794211681122386_8328149616478346293_n.jpg" alt="Bio Picture">
+      <div class="bio-text">
+        <p><strong>My Journey:</strong> From my early days designing board games with my father, to creating worlds through narrative design, I've always been driven by my love of gaming and storytelling. I now focus on bringing immersive and engaging narratives to life in interactive media.</p>
+      </div>
+    </div>
+    <div class="contact-info">
+      <p>Feel free to reach out to me via email or connect with me on LinkedIn!</p>
+      <p><strong>Email:</strong> kylacdriscoll@gmail.com</p>
+      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/kyladriscoll" target="_blank">linkedin.com/in/kyladriscoll</a></p>
+    </div>
+  </section>
 
-        <!-- Contact Information -->
-        <div class="contact-info">
-            <p>Feel free to reach out to me via email or connect with me on LinkedIn!</p>
-            <p><strong>Email:</strong> kylacdriscoll@gmail.com</p>
-            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/kyladriscoll" target="_blank">linkedin.com/in/kyladriscoll</a></p>
-        </div>
-    </section>
+  <!-- Portfolio Section -->
+  <section class="portfolio-section" id="projects">
+    <h2>My Projects</h2>
+    <div class="project-cards">
+      <div class="project-card">
+        <img src="TerrorBird_noBackground.png" alt="Echoes of the Salt Flats">
+        <h3>Echoes of the Salt Flats</h3>
+        <p>A tabletop roleplaying game created to explore how worldbuilding surfaces across different forms of interactive media.</p>
+        <a href="#project1" class="project-link">Learn More</a>
+      </div>
+      <div class="project-card">
+        <img src="Plates_Of_Power.png" alt="Plates of Power">
+        <h3>Plates of Power</h3>
+        <p>A rogue-like game inspired by Latino culture, emphasizing power, failure, and community.</p>
+        <a href="#project2" class="project-link">Learn More</a>
+      </div>
+      <div class="project-card">
+        <img src="Screenshot 2025-03-29 180650.png" alt="Craven">
+        <h3>Craven</h3>
+        <p>A single-player cooking game that celebrates Jamaican culture and explores the emotional journey of studying abroad.</p>
+        <a href="#project3" class="project-link">Learn More</a>
+      </div>
+      <div class="project-card">
+        <img src="DSC_0903.jpg" alt="Seeking Darkness in Acadia">
+        <h3>IQP: Seeking Darkness in Acadia</h3>
+        <p>An Interactive Qualifying Project in Acadia National Park assessing dark-sky compliance and public outreach.</p>
+        <a href="#project4" class="project-link">Learn More</a>
+      </div>
+      <div class="project-card">
+        <img src="DSC_0903.jpg" alt="Lyre’s Galaxy">
+        <h3>Lyre’s Galaxy</h3>
+        <p>A dice game for elementary-age children to learn numbers and emotional awareness through imaginative play.</p>
+        <a href="#project5" class="project-link">Learn More</a>
+      </div>
+    </div>
+  </section>
 
-    <section class="portfolio-section" id="projects">
-        <h2>My Projects</h2>
-        <div class="project-cards">
-            <div class="project-card">
-                <img src="TerrorBird_noBackground.png" alt="Project 1">
-                <h3>Echoes of the Salt Flats</h3>
-                <p>A tabletop roleplaying game created to explore how worldbuilding surfaces across different forms of interactive media.</p>
-                <a href="#project1" class="project-link">Learn More</a>
-            </div>
-    
-            <div class="project-card">
-                <img src="Plates_Of_Power.png" alt="Project 2">
-                <h3>Plates of Power</h3>
-                <p>Plates of Power is a rogue-like game inspired by Latino Culture, emphasizing power, failure, and the importance of community.</p>
-                <a href="#project2" class="project-link">Learn More</a>
-            </div>
-    
-            <div class="project-card">
-                <img src="Screenshot 2025-03-29 180650.png" alt="Craven">
-                <h3>Craven</h3>
-                <p>A single-player cooking game that celebrates Jamaican culture and explores the emotional journey of studying abroad.</p>
-                <a href="#project3" class="project-link">Learn More</a>
-            </div>
-    
-            <div class="project-card">
-                <img src="DSC_0903.jpg" alt="IQP">
-                <h3>Interactive Qualifying Project: Seeking Darkness in Acadia</h3>
-                <p>The Interactive Qualifying Project (IQP) students work with local organizations to tackle real-life problems. My IQP took place in Acadia National Park.</p>
-                <a href="#project4" class="project-link">Learn More</a>
-            </div>
-    
-            <div class="project-card">
-                <img src="DSC_0903.jpg" alt="Lyre's Galaxy">
-                <h3>Lyre's Galaxy</h3>
-                <p>Lyre's Galaxy is a dice game geared towards elementary age children who are learning their numbers.</p>
-                <a href="#project5" class="project-link">Learn More</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Remaining sections and footer go here -->
-
-    <section id="projects">
-        <!-- Your projects here -->
-      </section>
-<!-- Project 1 -->
+ <!-- Project 1 -->
 <section id="project1" class="project-details" style="background: #1e1e2f; padding: 2rem; border-radius: 1rem; box-shadow: 0 4px 10px rgba(0,0,0,0.3); margin-bottom: 2rem;">
-    <h3 style="color: #cba6f7; font-size: 1.8rem; margin-bottom: 1rem;">Echoes of the Salt Flats</h3>
-    <div class="project-detail-container" style="display: flex; gap: 2rem; flex-wrap: wrap;">
-      <div style="flex: 0 0 300px; max-width: 300px; border-radius: 10px;">
-        <img src="TerrorBird_noBackground.png" alt="Echoes of the Salt Flats" style="width: 100%; height: auto; border-radius: 10px;">
-      </div>
-      <div style="flex: 1; min-width: 300px;">
-        <p><strong>Echoes of the Salt Flats</strong> is a Tabletop RPG featuring a unique crafting mechanic, designed to explore how worldbuilding surfaces in different forms of interactive media.</p>
-        <p>Fluxians have been living peacefully with their Terror Birds for years. But when Terror Birds suddenly start passing away on the borders of the salt flats, it is up to the crew to figure out why—and how to stop their sacred companions from being killed.</p>
-        <p><strong>Narrative Designer:</strong> I collaborated with Colin Gallagher and took on narrative, showcase, and social media roles. Art by Saida Bahtierova.</p>
-      </div>
+  <h3 style="color: #cba6f7; font-size: 1.8rem; margin-bottom: 1rem;">Echoes of the Salt Flats</h3>
+  <div class="project-detail-container" style="display: flex; gap: 2rem; flex-wrap: wrap;">
+    <div style="flex: 0 0 300px; max-width: 300px; border-radius: 10px;">
+      <img src="TerrorBird_noBackground.png" alt="Echoes of the Salt Flats" style="width: 100%; height: auto; border-radius: 10px;">
     </div>
-    <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-top: 2rem;">
-      <div style="flex: 1; min-width: 300px; max-width: 500px;">
-        <p style="text-align: center;"><strong>Quick Start Guide</strong></p>
-        <iframe src="06 Echoes of the Salt Flats Draft (1).pdf" width="100%" height="500px" style="border: 1px solid #cba6f7; border-radius: 0.5rem;"></iframe>
-      </div>
-      <div style="flex: 1; min-width: 300px; max-width: 500px;">
-        <p style="text-align: center;"><strong>Character Sheet</strong></p>
-        <iframe src="Character Sheet - Echoes of the Salt Flat (2).pdf" width="100%" height="500px" style="border: 1px solid #cba6f7; border-radius: 0.5rem;"></iframe>
-      </div>
+    <div style="flex: 1; min-width: 300px;">
+      <p><strong>Echoes of the Salt Flats</strong> is a Tabletop RPG featuring a unique crafting mechanic, designed to explore how worldbuilding surfaces in different forms of interactive media.</p>
+      <p>Fluxians have been living peacefully with their Terror Birds for years. But when Terror Birds suddenly start passing away on the borders of the salt flats, it is up to the crew to figure out why—and how to stop their sacred companions from being killed.</p>
+      <p><strong>Narrative Designer:</strong> I collaborated with Colin Gallagher and took on narrative, showcase, and social media roles. Art by Saida Bahtierova.</p>
     </div>
-  </section>
-  
-  <hr style="border: none; height: 2px; background: #cba6f7; width: 80%; margin: 3rem auto;">
-  
-  
-  <!-- Project 2 - Plates of Power -->
+  </div>
+  <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-top: 2rem;">
+    <div style="flex: 1; min-width: 300px; max-width: 500px;">
+      <p style="text-align: center;"><strong>Quick Start Guide</strong></p>
+      <iframe src="06 Echoes of the Salt Flats Draft (1).pdf" width="100%" height="500px" style="border: 1px solid #cba6f7; border-radius: 0.5rem;"></iframe>
+    </div>
+    <div style="flex: 1; min-width: 300px; max-width: 500px;">
+      <p style="text-align: center;"><strong>Character Sheet</strong></p>
+      <iframe src="Character Sheet - Echoes of the Salt Flat (2).pdf" width="100%" height="500px" style="border: 1px solid #cba6f7; border-radius: 0.5rem;"></iframe>
+    </div>
+  </div>
+</section>
+
+<hr style="border: none; height: 2px; background: #cba6f7; width: 80%; margin: 3rem auto;">
+
+
+<!-- Project 2 - Plates of Power -->
 <section id="project2" class="project-details" style="background: #1e1e2f; padding: 2rem; border-radius: 1rem; box-shadow: 0 4px 10px rgba(0,0,0,0.3); margin-bottom: 2rem;">
-    <h3 style="color: #cba6f7; font-size: 1.8rem; margin-bottom: 1rem;">Plates of Power</h3>
-  
-    <!-- Top Content: Image + Description -->
-    <div class="project-detail-container" style="display: flex; gap: 2rem; flex-wrap: wrap;">
-      <div style="flex: 0 0 300px; max-width: 300px; border-radius: 10px;">
-        <img src="Mentor_Sticker01.png" alt="Plates of Power" style="width: 100%; height: auto; border-radius: 10px;">
-      </div>
-      <div style="flex: 1; min-width: 300px;">
-        <p><strong>Plates of Power</strong> is a rogue-like game inspired by Latino culture, emphasizing power, failure, and the importance of community. Returning home from college, Ale Zardoya hears of her sister's disappearance and must embrace the role of Champion as she embarks on a mission to find her.</p>
-        <p><strong>Social Media Manager:</strong> I was the sole Social Media Marketing Manager for Plates of Power. During the 14 weeks with this team, I created a full campaign to engage the community and promote the game.</p>
-        <p>Check out the studio's work here: <a href="https://linktr.ee/studioberto" target="_blank" style="color: #cba6f7; text-decoration: underline;">Studio Berto Linktree</a></p>
+  <h3 style="color: #cba6f7; font-size: 1.8rem; margin-bottom: 1rem;">Plates of Power</h3>
+
+  <!-- Top Content: Image + Description -->
+  <div class="project-detail-container" style="display: flex; gap: 2rem; flex-wrap: wrap;">
+    <div style="flex: 0 0 300px; max-width: 300px; border-radius: 10px;">
+      <img src="Mentor_Sticker01.png" alt="Plates of Power" style="width: 100%; height: auto; border-radius: 10px;">
+    </div>
+    <div style="flex: 1; min-width: 300px;">
+      <p><strong>Plates of Power</strong> is a rogue-like game inspired by Latino culture, emphasizing power, failure, and the importance of community. Returning home from college, Ale Zardoya hears of her sister's disappearance and must embrace the role of Champion as she embarks on a mission to find her.</p>
+      <p><strong>Social Media Manager:</strong> I was the sole Social Media Marketing Manager for Plates of Power. During the 14 weeks with this team, I created a full campaign to engage the community and promote the game.</p>
+      <p>Check out the studio's work here: <a href="https://linktr.ee/studioberto" target="_blank" style="color: #cba6f7; text-decoration: underline;">Studio Berto Linktree</a></p>
+    </div>
+  </div>
+
+  <!-- Instagram Embeds -->
+  <div style="margin-top: 2rem;">
+    <h4 style="text-align: center; color: #D6A3E1; margin-bottom: 1rem;">Featured on Instagram</h4>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem;">
+      <!-- Embed 1 -->
+      <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DHq3ObmOb91/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="max-width: 300px; min-width: 300px; width: 100%; margin: auto;"></blockquote>
+
+      <!-- Embed 2 -->
+      <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DHligshO4uQ/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="max-width: 300px; min-width: 300px; width: 100%; margin: auto;"></blockquote>
+
+      <!-- Embed 3 -->
+      <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DFeE7R3p4rd/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="max-width: 300px; min-width: 300px; width: 100%; margin: auto;"></blockquote>
+    </div>
+  </div>
+
+  <!-- IG Script (only include ONCE on the page) -->
+  <script async src="//www.instagram.com/embed.js"></script>
+</section>
+
+
+<hr style="border: none; height: 2px; background: #cba6f7; width: 80%; margin: 3rem auto;">
+
+
+<!-- Project 3 - Craven -->
+<section id="project3" class="project-details" style="background: #1e1e2f; padding: 2rem; border-radius: 1rem; box-shadow: 0 4px 10px rgba(0,0,0,0.3); margin-bottom: 2rem;">
+  <div class="project-detail-container" style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center;">
+    <!-- Left: Thumbnail + Description -->
+    <div style="flex: 1; min-width: 300px; max-width: 500px; text-align: center;">
+      <h3 style="color: #cba6f7; font-size: 1.8rem; margin-bottom: 1rem;">Craven</h3>
+      <img src="Screenshot 2025-03-29 180650.png" alt="Craven" style="width: 100%; max-width: 300px; height: auto; border-radius: 10px; margin-bottom: 1rem;">
+      <div style="text-align: left;">
+        <p><strong>Craven</strong> is a cozy cooking game for the Nintendo Switch that celebrates Jamaican culture and explores homesickness through food and storytelling.</p>
+        <p><strong>Design Pillars:</strong> Expression, Tradition, Nostalgia</p>
       </div>
     </div>
-  
-    <!-- Instagram Embeds -->
-    <div style="margin-top: 2rem;">
-      <h4 style="text-align: center; color: #D6A3E1; margin-bottom: 1rem;">Featured on Instagram</h4>
-      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem;">
-        <!-- Embed 1 -->
-        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DHq3ObmOb91/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="max-width: 300px; min-width: 300px; width: 100%; margin: auto;"></blockquote>
-  
-        <!-- Embed 2 -->
-        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DHligshO4uQ/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="max-width: 300px; min-width: 300px; width: 100%; margin: auto;"></blockquote>
-  
-        <!-- Embed 3 -->
-        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DFeE7R3p4rd/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="max-width: 300px; min-width: 300px; width: 100%; margin: auto;"></blockquote>
+    <!-- Right: PDF -->
+    <div style="flex: 1; min-width: 300px; max-width: 600px;">
+      <p style="text-align: center;"><strong>Design Document</strong></p>
+      <iframe src="Craven - Cozy Games FInal Project.docx - Google Docs.pdf" width="100%" height="500px" style="border: 1px solid #cba6f7; border-radius: 0.5rem;"></iframe>
+    </div>
+  </div>
+</section>
+
+<hr style="border: none; height: 2px; background: #cba6f7; width: 80%; margin: 3rem auto;">
+
+
+<!-- Project 4 - Acadia -->
+<section id="project4" class="project-details" style="background: #1e1e2f; padding: 2rem; border-radius: 1rem; box-shadow: 0 4px 10px rgba(0,0,0,0.3); margin-bottom: 2rem;">
+  <div class="project-detail-container" style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center;">
+    <!-- Left: Title + Thumbnail + Description -->
+    <div style="flex: 1; min-width: 300px; max-width: 500px; text-align: center;">
+      <h3 style="color: #cba6f7; font-size: 1.8rem; margin-bottom: 1rem;">Interactive Qualifying Project: Seeking Darkness in Acadia</h3>
+      <img src="darkSkyTeam23.png" alt="Seeking Darkness in Acadia" style="width: 100%; max-width: 300px; height: auto; border-radius: 10px; margin-bottom: 1rem;">
+      <div style="text-align: left;">
+        <p>This IQP assessed Acadia National Park’s eligibility for International Dark Sky Park designation. We gathered field data, evaluated light fixtures, and facilitated public outreach to support sustainable lighting practices in the park.</p>
+        <p><strong>Skills Gained:</strong> Research writing, grant preparation, public outreach, and team collaboration.</p>
       </div>
     </div>
-  
-    <!-- IG Script (only include ONCE on the page) -->
-    <script async src="//www.instagram.com/embed.js"></script>
-  </section>
-  
-  
-  <hr style="border: none; height: 2px; background: #cba6f7; width: 80%; margin: 3rem auto;">
-  
-  
-  <!-- Project 3 - Craven -->
-  <section id="project3" class="project-details" style="background: #1e1e2f; padding: 2rem; border-radius: 1rem; box-shadow: 0 4px 10px rgba(0,0,0,0.3); margin-bottom: 2rem;">
-    <div class="project-detail-container" style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center;">
-      <!-- Left: Thumbnail + Description -->
-      <div style="flex: 1; min-width: 300px; max-width: 500px; text-align: center;">
-        <h3 style="color: #cba6f7; font-size: 1.8rem; margin-bottom: 1rem;">Craven</h3>
-        <img src="Screenshot 2025-03-29 180650.png" alt="Craven" style="width: 100%; max-width: 300px; height: auto; border-radius: 10px; margin-bottom: 1rem;">
-        <div style="text-align: left;">
-          <p><strong>Craven</strong> is a cozy cooking game for the Nintendo Switch that celebrates Jamaican culture and explores homesickness through food and storytelling.</p>
-          <p><strong>Design Pillars:</strong> Expression, Tradition, Nostalgia</p>
-        </div>
-      </div>
-      <!-- Right: PDF -->
-      <div style="flex: 1; min-width: 300px; max-width: 600px;">
-        <p style="text-align: center;"><strong>Design Document</strong></p>
-        <iframe src="Craven - Cozy Games FInal Project.docx - Google Docs.pdf" width="100%" height="500px" style="border: 1px solid #cba6f7; border-radius: 0.5rem;"></iframe>
-      </div>
+    <!-- Right: PDF -->
+    <div style="flex: 1; min-width: 300px; max-width: 600px;">
+      <p style="text-align: center;"><strong>Final Report</strong></p>
+      <iframe src="Dark Sky E23 Report.pdf" width="100%" height="500px" style="border: 1px solid #cba6f7; border-radius: 0.5rem;"></iframe>
     </div>
-  </section>
-  
-  <hr style="border: none; height: 2px; background: #cba6f7; width: 80%; margin: 3rem auto;">
-  
-  
-  <!-- Project 4 - Acadia -->
-  <section id="project4" class="project-details" style="background: #1e1e2f; padding: 2rem; border-radius: 1rem; box-shadow: 0 4px 10px rgba(0,0,0,0.3); margin-bottom: 2rem;">
-    <div class="project-detail-container" style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center;">
-      <!-- Left: Title + Thumbnail + Description -->
-      <div style="flex: 1; min-width: 300px; max-width: 500px; text-align: center;">
-        <h3 style="color: #cba6f7; font-size: 1.8rem; margin-bottom: 1rem;">Interactive Qualifying Project: Seeking Darkness in Acadia</h3>
-        <img src="darkSkyTeam23.png" alt="Seeking Darkness in Acadia" style="width: 100%; max-width: 300px; height: auto; border-radius: 10px; margin-bottom: 1rem;">
-        <div style="text-align: left;">
-          <p>This IQP assessed Acadia National Park’s eligibility for International Dark Sky Park designation. We gathered field data, evaluated light fixtures, and facilitated public outreach to support sustainable lighting practices in the park.</p>
-          <p><strong>Skills Gained:</strong> Research writing, grant preparation, public outreach, and team collaboration.</p>
-        </div>
-      </div>
-      <!-- Right: PDF -->
-      <div style="flex: 1; min-width: 300px; max-width: 600px;">
-        <p style="text-align: center;"><strong>Final Report</strong></p>
-        <iframe src="Dark Sky E23 Report.pdf" width="100%" height="500px" style="border: 1px solid #cba6f7; border-radius: 0.5rem;"></iframe>
-      </div>
-    </div>
-  </section>
-  
-  <hr style="border: none; height: 2px; background: #cba6f7; width: 80%; margin: 3rem auto;">
-  
+  </div>
+</section>
+
+<hr style="border: none; height: 2px; background: #cba6f7; width: 80%; margin: 3rem auto;">
+
 <!-- Project 5 -->
 <section id="project5" class="project-details" style="background: #1e1e2f; padding: 2rem; border-radius: 1rem; box-shadow: 0 4px 10px rgba(0,0,0,0.3); margin-bottom: 2rem;">
-    <h3 style="color: #cba6f7; font-size: 1.8rem; margin-bottom: 1rem;">Lyre's Galaxy</h3>
-    <div class="project-detail-container" style="display: flex; flex-direction: column; align-items: center; gap: 1.5rem;">
-      <div class="project-detail-text" style="max-width: 800px; text-align: left;">
-        <p><strong>Lyre's Galaxy</strong> is a dice game for elementary-aged children that encourages number learning and emotional awareness through calming, imaginative play. In this simple game, parents and children create their own galaxy while learning and managing big feelings with a calm-down jar.</p>
-        <p><strong>Narrative Designer:</strong> This game was created in a solo team, inspired by my younger sister.</p>
+  <h3 style="color: #cba6f7; font-size: 1.8rem; margin-bottom: 1rem;">Lyre's Galaxy</h3>
+  <div class="project-detail-container" style="display: flex; flex-direction: column; align-items: center; gap: 1.5rem;">
+    <div class="project-detail-text" style="max-width: 800px; text-align: left;">
+      <p><strong>Lyre's Galaxy</strong> is a dice game for elementary-aged children that encourages number learning and emotional awareness through calming, imaginative play. In this simple game, parents and children create their own galaxy while learning and managing big feelings with a calm-down jar.</p>
+      <p><strong>Narrative Designer:</strong> This game was created in a solo team, inspired by my younger sister.</p>
+    </div>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; width: 100%;">
+      <div style="flex: 1; min-width: 300px; max-width: 500px;">
+        <p style="text-align: center;"><strong>Instructions</strong></p>
+        <img src="Lyre's Galaxy Instructions.png" alt="Lyre's Galaxy Instructions" style="width: 100%; border-radius: 0.5rem;">
       </div>
-  
-      <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; width: 100%;">
-        <div style="flex: 1; min-width: 300px; max-width: 500px;">
-          <p style="text-align: center;"><strong>Instructions</strong></p>
-          <img src="Lyre's Galaxy Instructions.png" alt="Lyre's Galaxy Instructions" style="width: 100%; border-radius: 0.5rem;">
-        </div>
-  
-        <div style="flex: 1; min-width: 300px; max-width: 500px;">
-          <p style="text-align: center;"><strong>Storyline</strong></p>
-          <img src="Lyre's Galaxy Storyline.png" alt="Lyre's Galaxy Storyline" style="width: 100%; border-radius: 0.5rem;">
-        </div>
+
+      <div style="flex: 1; min-width: 300px; max-width: 500px;">
+        <p style="text-align: center;"><strong>Storyline</strong></p>
+        <img src="Lyre's Galaxy Storyline.png" alt="Lyre's Galaxy Storyline" style="width: 100%; border-radius: 0.5rem;">
       </div>
     </div>
-  </section>
-  
-  
+  </div>
+</section>
 
-<!-- Media Queries for Responsiveness -->
-<style>
-    @media screen and (max-width: 768px) {
-        .project-detail-container {
-            flex-direction: column;
-            gap: 2rem;
-        }
 
-        .project-detail-image {
-            flex: 1;
-            min-width: 100%;
-        }
+  <!-- Footer -->
+  <footer>
+    <p>Kyla Driscoll – Pittston, Maine, USA – kylacdriscoll@gmail.com</p>
+  </footer>
 
-        .project-detail-text {
-            flex: 1;
-            min-width: 100%;
-            font-size: 1rem;
-        }
-
-        h3 {
-            font-size: 1.5rem;
-        }
-
-        hr {
-            width: 90%;
-        }
-    }
-
-    @media screen and (max-width: 480px) {
-        h3 {
-            font-size: 1.2rem;
-        }
-
-        .project-detail-text {
-            font-size: 0.9rem;
-        }
-
-        hr {
-            width: 100%;
-        }
-    }
-</style>
-
-<!-- Footer Section -->
-<footer>
-    <p>Kyla Driscoll - Pittston, Maine, USA - kylacdriscoll@gmail.com</p>
-</footer>
-<script>
-    function toggleMenu() {
-      const menu = document.getElementById('mobileMenu');
-      const isOpen = menu.style.display === 'flex';
-      menu.style.display = isOpen ? 'none' : 'flex';
-    }
-  </script>
-  </body>
   <script>
+    // Toggle mobile menu
     function toggleMenu() {
-      const menu = document.getElementById('mobileMenu');
-      menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+      document.getElementById('mobileMenu').classList.toggle('active');
     }
+    document.getElementById('hamburger')
+      .addEventListener('click', toggleMenu);
   </script>
-  </html>
+</body>
+</html>
+
