@@ -498,10 +498,3 @@ footer p {
       margin: 0 10px;
   }
 }
-
-/* Force portrait to 350px wide */
-section#about .bio-container img {
-  flex: 1000px !important;
-  width: 1000px !important;
-  max-width: 100% !important;
-}
